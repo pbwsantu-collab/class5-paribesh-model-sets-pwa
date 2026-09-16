@@ -1,5 +1,5 @@
 // Class 5 Paribesh Model Sets
-// Complete: 1,2,3,4,5,6
+// Complete: 1,2,3,4,5,6,7
 window.SETS_DATA = {
   1: {
     title: "MODEL SET-1",
@@ -334,6 +334,62 @@ window.SETS_DATA = {
         { text: "6.3 How do we use solar energy in our daily life? [Sri Ramkrishna Sikshalaya, 2019]", answer: "Solar cookers, solar water heaters, solar street lights, solar calculators and solar panels for electricity." },
         { text: "6.4 Write briefly about high tide and low tide.", answer: "High tide is the rise of sea water due to the gravitational pull of the Moon (and Sun). Low tide is the fall of sea water. They occur twice a day." },
         { text: "6.5 What does ‘Independence’ mean? Why do we celebrate Independence Day every year in India? [Kanchrapara Harnett High School (H.S.), 2019]", answer: "Independence means freedom from foreign rule. We celebrate 15 August every year to remember the day India got freedom in 1947 and to honour the freedom fighters." }
+      ]}
+    ]
+  },
+  7: {
+    title: "MODEL SET-7",
+    time: "1 hour 30 minutes",
+    fullMarks: 50,
+    sections: [
+      { title: "1. Choose the correct answer: (1×6=6)", questions: [
+        { text: "1.1 Used to get a lot of heat—", options: ["(a) Wood", "(b) Charcoal", "(c) Coal", "(d) All"], answer: "(d) All" },
+        { text: "1.2 Insecticide is—", options: ["(a) Ammonium nitrate", "(b) IR 20", "(c) Motoside", "(d) All"], answer: "(c) Motoside" },
+        { text: "1.3 A bar is a—", options: ["(a) River", "(b) Tree", "(c) Forest", "(d) Sea"], answer: "(a) River" },
+        { text: "1.4 The Moon revolves around the Earth in—", options: ["(a) 29 days", "(b) 30 days", "(c) 31 days", "(d) 29½ days"], answer: "(d) 29½ days" },
+        { text: "1.5 Diesel engine is fitted in— [Panskura B.B. High School, 2019]", options: ["(a) Ferry", "(b) Boat", "(c) Steamer", "(d) All"], answer: "(d) All" },
+        { text: "1.6 From green plants we get—", options: ["(a) Nitrogen", "(b) Hydrogen", "(c) Carbon monoxide", "(d) Oxygen"], answer: "(d) Oxygen" }
+      ]},
+      { title: "2. Fill in the blanks: (1×6=6)", questions: [
+        { text: "2.1 The product of coal is _________. [Jhargram Kumud Kumari Institution, 2019]", answer: "Coke / Coal gas / Coal tar" },
+        { text: "2.2 The root of the tree prevents _________.", answer: "soil erosion" },
+        { text: "2.3 The name of a hydro-electric power station near Bhutan is _________. [Burdwan Harisava Hindu Girls’ High School, 2019]", answer: "Chukha" },
+        { text: "2.4 The store of _________ energy will be finished one day. [Baghbazar Multipurpose Girls’ School, 2019]", answer: "non-renewable / fossil fuel" },
+        { text: "2.5 _________ project has been built on the Damodar river. [Ballygunge Govt. High School, 2019]", answer: "Damodar Valley / DVC" },
+        { text: "2.6 High _________ rhododendron tree grows.", answer: "altitude / mountain / Himalayan" }
+      ]},
+      { title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)", questions: [
+        { text: "3.1 There is melanin in the upper layer of the skin.", answer: "✓" },
+        { text: "3.2 The water tap on the road should be kept open. [Hare School, 2019]", answer: "✗" },
+        { text: "3.3 The meaning of the word ‘Mazar’ is the birthplace of Pir Sahib. [Kanchrapara Harnett High School (H.S.), 2019]", answer: "✗" },
+        { text: "3.4 Water pollution occurs due to the effect of acid rain.", answer: "✓" },
+        { text: "3.5 Rope is made from bamboo.", answer: "✗" },
+        { text: "3.6 Medicine is made from the leaves of the Neem tree.", answer: "✓" }
+      ]},
+      { title: "4. Answer in one sentence: (1×6=6)", questions: [
+        { text: "4.1 Where can a complaint be lodged about the adulteration of a shopkeeper? [Basirhat High School (H.S.), 2019]", answer: "Consumer Forum / Food Inspector / Weights & Measures Department." },
+        { text: "4.2 What will happen if there is not a single leaf on the tree? [Krishnagar Govt. Girl’s High School, 2019]", answer: "The tree will not be able to prepare food (photosynthesis stops) and may die." },
+        { text: "4.3 What is the work of the oar of a boat? [Lake Town Govt. Sponsored Girls’ High School, 2019]", answer: "To row / propel the boat forward." },
+        { text: "4.4 What is a big church called?", answer: "Cathedral / Basilica." },
+        { text: "4.5 What is called ‘black diamond’?", answer: "Coal." },
+        { text: "4.6 Below what age is it not proper to marry a girl?", answer: "18 years." }
+      ]},
+      { title: "5. Answer in two-three sentences (any seven): (2×7=14)", questions: [
+        { text: "5.1 Why are renewable energy sources used more at present? [Chinsura Deshbandhu Memorial High School, 2019]", answer: "They do not get exhausted and cause less pollution. They are environment-friendly and sustainable." },
+        { text: "5.2 What work is done with electricity?", answer: "Lighting, running machines, cooking, heating, communication and transport." },
+        { text: "5.3 What is called flash flood? Where is flash flood seen in West Bengal? [Contai Model Institution, 2019]", answer: "Sudden flood caused by very heavy rainfall in a short time. Seen in the hilly regions of North Bengal and some riverine areas." },
+        { text: "5.4 Why does acid rain occur? [Hare School, 2019]", answer: "Oxides of sulphur and nitrogen from factories and vehicles mix with rain water and form acids." },
+        { text: "5.5 Write a note: Earthquake [Burdwan Harisava Hindu Girls’ High School, 2019]", answer: "Sudden shaking of the Earth’s surface caused by movement of tectonic plates. It can destroy buildings and cause loss of life." },
+        { text: "5.6 What is called high tide and low tide?", answer: "High tide is the rise of sea water due to the Moon’s gravitational pull. Low tide is the fall of sea water. They occur twice a day." },
+        { text: "5.7 What is the need of a first-aid box?", answer: "To give immediate treatment for minor injuries, cuts, burns etc. before proper medical help arrives." },
+        { text: "5.8 What is called a power tower?", answer: "A tall structure that supports high-tension electric wires for transmitting electricity over long distances." }
+      ]},
+      { title: "6. Answer in five-six sentences (any four): (3×4=12)", questions: [
+        { text: "6.1 What should you do when you go out on the road for road safety? [Chinsurah Deshbandhu Memorial High School, 2019]", answer: "Use the footpath, cross only at zebra crossing, follow traffic signals, never use mobile while crossing, wear helmet while riding two-wheelers and seat belt in cars." },
+        { text: "6.2 Why is the Sun very necessary for us? [Hare School, 2019]", answer: "The Sun is the main source of light and heat. It helps plants in photosynthesis. All energy on Earth ultimately comes from the Sun. It controls weather and climate." },
+        { text: "6.3 What is called Boro paddy? In which month is this paddy cultivated and in which month is it harvested? [Ballygunge Govt. High School, 2019]", answer: "Boro is a winter rice variety. It is sown in November–December and harvested in April–May." },
+        { text: "6.4 Write a note: Environment-friendly vehicle [Hindu School, 2019]", answer: "Vehicles that cause less or no pollution such as bicycles, electric vehicles, CNG vehicles and public transport. They help reduce air pollution and conserve fossil fuels." },
+        { text: "6.5 Which fish can be cultivated in the paddy field? Write the names of two fish that have many bones. On the bank of which river is Balurghat located?", answer: "Puti, Magur or common carp can be cultivated in paddy fields. Fish with many bones: Rui, Katla or Hilsa. Balurghat is located on the bank of the Atrai river." }
       ]}
     ]
   }
