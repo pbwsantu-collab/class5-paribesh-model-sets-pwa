@@ -1,5 +1,5 @@
 // Class 5 Paribesh Model Sets
-// Complete: 1,2,3,4,5
+// Complete: 1,2,3,4,5,6
 window.SETS_DATA = {
   1: {
     title: "MODEL SET-1",
@@ -65,7 +65,7 @@ window.SETS_DATA = {
       { title: "1. Choose the correct answer: (1×6=6)", questions: [
         { text: "1.1 Famous for terracotta work—", options: ["(a) Purulia","(b) Bishnupur","(c) Bardhaman","(d) Nadia"], answer: "(b) Bishnupur" },
         { text: "1.2 World Environment Day is observed on—", options: ["(a) 15 June","(b) 1 October","(c) 15 October","(d) 5 June"], answer: "(d) 5 June" },
-        { text: "1.3 After high tide, the two hands of the clock (hour and minute hands) will be at the same place again after— [Panskura B.B. High School, 2019]", answer: "(b) 1 hour 05 minutes" },
+        { text: "1.3 After high tide, the two hands of the clock (hour and minute hands) will be at the same place again after— [Panskura B.B. High School, 2019]", options: ["(a) 1.00 hour","(b) 1 hour 05 minutes","(c) 1 hour 10 minutes","(d) 1 hour 5 minutes 30 seconds"], answer: "(b) 1 hour 05 minutes" },
         { text: "1.4 Coal is found in West Bengal in—", options: ["(a) Raniganj","(b) Durgapur","(c) Baharampur","(d) Bardhaman"], answer: "(a) Raniganj" },
         { text: "1.5 A comet looks like—", options: ["(a) a broom","(b) a stick","(c) the moon","(d) a bamboo"], answer: "(a) a broom" },
         { text: "1.6 The entrance to Buxa forest is—", options: ["(a) Cooch Behar","(b) Malda","(c) Alipurduar","(d) Jalpaiguri"], answer: "(c) Alipurduar" }
@@ -278,6 +278,62 @@ window.SETS_DATA = {
         { text: "6.3 What is called weather and climate? [Batanagar Sri Ramakrishna Ashram Vivekananda Vidyamandir, 2019]", answer: "Weather is the condition of the atmosphere at a particular place and time. Climate is the average weather condition of a place over a long period (many years)." },
         { text: "6.4 Identify three parts of the picture of the Rui fish.", answer: "Head, body and tail. (Also fins, gills, scales – any three parts.)" },
         { text: "6.5 What is an earthquake? What precautions should be taken during an earthquake? [Malda Bibhuti Bhusan High School (H.S.), 2019]", answer: "Sudden shaking of the Earth’s surface caused by movement of tectonic plates. Precautions: Drop, Cover and Hold On; stay away from windows and heavy objects; move to open space if possible." }
+      ]}
+    ]
+  },
+  6: {
+    title: "MODEL SET-6",
+    time: "1 hour 30 minutes",
+    fullMarks: 50,
+    sections: [
+      { title: "1. Choose the correct answer: (1×6=6)", questions: [
+        { text: "1.1 In which year did the Non-Cooperation Movement take place?", options: ["(a) 1930", "(b) 1940", "(c) 1942", "(d) 1939"], answer: "(a) 1930" },
+        { text: "1.2 The insect of water is called—", options: ["(a) Dragonfly", "(b) Rui fish", "(c) Crab", "(d) Whale"], answer: "(a) Dragonfly" },
+        { text: "1.3 What happens after a silkworm pupa?", options: ["(a) Moth", "(b) Butterfly", "(c) Cockroach", "(d) Honeybee"], answer: "(a) Moth" },
+        { text: "1.4 A tree that has no name is—", options: ["(a) Mango", "(b) Banyan", "(c) Jackfruit", "(d) Guava"], answer: "(b) Banyan" },
+        { text: "1.5 Which is against road safety—", options: ["(a) Using seat belt of car", "(b) Using zebra crossing while crossing the road", "(c) Crossing the road while talking on mobile phone", "(d) Riding motorcycle wearing helmet"], answer: "(c) Crossing the road while talking on mobile phone" },
+        { text: "1.6 A wild animal is—", options: ["(a) Tiger", "(b) Cat", "(c) Duck", "(d) Dog"], answer: "(a) Tiger" }
+      ]},
+      { title: "2. Fill in the blanks: (1×6=6)", questions: [
+        { text: "2.1 Taking many people together, _________ is formed.", answer: "Society / Crowd" },
+        { text: "2.2 Man dies of _________ when he is very thirsty.", answer: "dehydration / thirst" },
+        { text: "2.3 The product of coal is _________.", answer: "Coke / Coal gas / Coal tar" },
+        { text: "2.4 _________ country is called the ‘land of earthquakes’.", answer: "Japan" },
+        { text: "2.5 With the increase of age, _________ decreases.", answer: "working capacity / strength / immunity" },
+        { text: "2.6 The headquarters of North 24 Parganas district is _________.", answer: "Barasat" }
+      ]},
+      { title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)", questions: [
+        { text: "3.1 Mulberry tree is cultivated for rearing silkworms. [Serampore High School, 2019]", answer: "✓" },
+        { text: "3.2 The Diu and Lichu rivers have joined to form the Mahanadi. [Taki House Govt. S.M. School for Boys’, 2019]", answer: "✗" },
+        { text: "3.3 A comet looks like a mountain.", answer: "✗" },
+        { text: "3.4 Petroleum is called liquid gold.", answer: "✓" },
+        { text: "3.5 The Moon is 1 lakh kilometres away from the Earth. [Ghoshpara Nischinda Balika Vidyapith, 2019]", answer: "✗" },
+        { text: "3.6 Flash flood occurred in Uttarakhand.", answer: "✓" }
+      ]},
+      { title: "4. Answer in one sentence: (1×6=6)", questions: [
+        { text: "4.1 What is required for the annual motion of the Earth? [Batanagar Sri Ramakrishna Ashram Vivekananda Vidyamandir, 2019]", answer: "The gravitational force of the Sun / Revolution around the Sun." },
+        { text: "4.2 Why is oxygen sent to the coal mine? [Panskura B.B. High School, 2019]", answer: "So that miners can breathe / to prevent suffocation." },
+        { text: "4.3 What is the colour of our body?", answer: "It varies (fair, dark, brown etc.)." },
+        { text: "4.4 Who started the Sati system? [Fanindra Deb Institution, 2019]", answer: "It was an ancient custom; abolished by Raja Rammohan Roy and Lord William Bentinck." },
+        { text: "4.5 In which region is the pine tree seen in the forest?", answer: "Himalayan / Hilly / Mountainous region." },
+        { text: "4.6 From what is thermal electricity produced?", answer: "By burning coal / fossil fuels." }
+      ]},
+      { title: "5. Answer in two-three sentences (any seven): (2×7=14)", questions: [
+        { text: "5.1 Write any two effects of the Sun on plants. [Dinhata Soni Debi Jain High School, Cooch Behar, 2019]", answer: "Helps in photosynthesis. Provides light and heat necessary for growth." },
+        { text: "5.2 What is sex education?", answer: "Education about physical and emotional changes during adolescence and safe reproductive health." },
+        { text: "5.3 What changes have occurred in modern agriculture? [Tamluk Hamilton High School, 2019]", answer: "Use of high-yielding seeds, chemical fertilisers, pesticides, tractors and irrigation facilities." },
+        { text: "5.4 Who was Surya Sen? [Mugkalyan Girls’ High School (H.S.), 2019]", answer: "A revolutionary freedom fighter of Bengal, popularly known as Masterda. He led the Chittagong Armoury Raid in 1930." },
+        { text: "5.5 Why are there big big holes on the surface of Jupiter? [Ghoshpara Nischinda Balika Vidyapith, 2019]", answer: "Due to impact of comets and meteorites (e.g. Shoemaker-Levy 9)." },
+        { text: "5.6 Why is it necessary to plant trees?", answer: "Trees give oxygen, reduce pollution, prevent soil erosion and provide shade and fruits." },
+        { text: "5.7 Write two advantages of train as a means of transport.", answer: "Cheap and carries a large number of passengers and goods. Relatively safe and less polluting." },
+        { text: "5.8 Write a note: Drought", answer: "A long period of little or no rainfall causing shortage of water, crop failure and hardship for people and animals." }
+      ]},
+      { title: "6. Answer in five-six sentences (any four): (3×4=12)", questions: [
+        { text: "6.1 Explain with diagram: The orbit of the Earth and the Moon. [Burdwan Harisava Hindu Girls’ High School, 2019]", answer: "The Earth revolves around the Sun in an elliptical orbit. The Moon revolves around the Earth. Both motions together cause day-night, seasons and eclipses." },
+        { text: "6.2 What is called conventional energy?", answer: "Energy obtained from traditional sources like coal, petroleum, natural gas and large hydro-electric projects. These are mostly non-renewable." },
+        { text: "6.3 How do we use solar energy in our daily life? [Sri Ramkrishna Sikshalaya, 2019]", answer: "Solar cookers, solar water heaters, solar street lights, solar calculators and solar panels for electricity." },
+        { text: "6.4 Write briefly about high tide and low tide.", answer: "High tide is the rise of sea water due to the gravitational pull of the Moon (and Sun). Low tide is the fall of sea water. They occur twice a day." },
+        { text: "6.5 What does ‘Independence’ mean? Why do we celebrate Independence Day every year in India? [Kanchrapara Harnett High School (H.S.), 2019]", answer: "Independence means freedom from foreign rule. We celebrate 15 August every year to remember the day India got freedom in 1947 and to honour the freedom fighters." }
       ]}
     ]
   }
