@@ -1,5 +1,5 @@
 // Class 5 Paribesh Model Sets
-// Complete: 1,2,3,4
+// Complete: 1,2,3,4,5
 window.SETS_DATA = {
   1: {
     title: "MODEL SET-1",
@@ -65,7 +65,7 @@ window.SETS_DATA = {
       { title: "1. Choose the correct answer: (1×6=6)", questions: [
         { text: "1.1 Famous for terracotta work—", options: ["(a) Purulia","(b) Bishnupur","(c) Bardhaman","(d) Nadia"], answer: "(b) Bishnupur" },
         { text: "1.2 World Environment Day is observed on—", options: ["(a) 15 June","(b) 1 October","(c) 15 October","(d) 5 June"], answer: "(d) 5 June" },
-        { text: "1.3 After high tide, the two hands of the clock (hour and minute hands) will be at the same place again after— [Panskura B.B. High School, 2019]", options: ["(a) 1.00 hour","(b) 1 hour 05 minutes","(c) 1 hour 10 minutes","(d) 1 hour 5 minutes 30 seconds"], answer: "(b) 1 hour 05 minutes" },
+        { text: "1.3 After high tide, the two hands of the clock (hour and minute hands) will be at the same place again after— [Panskura B.B. High School, 2019]", answer: "(b) 1 hour 05 minutes" },
         { text: "1.4 Coal is found in West Bengal in—", options: ["(a) Raniganj","(b) Durgapur","(c) Baharampur","(d) Bardhaman"], answer: "(a) Raniganj" },
         { text: "1.5 A comet looks like—", options: ["(a) a broom","(b) a stick","(c) the moon","(d) a bamboo"], answer: "(a) a broom" },
         { text: "1.6 The entrance to Buxa forest is—", options: ["(a) Cooch Behar","(b) Malda","(c) Alipurduar","(d) Jalpaiguri"], answer: "(c) Alipurduar" }
@@ -185,43 +185,99 @@ window.SETS_DATA = {
       { title: "2. Fill in the blanks: (1×6=6)", questions: [
         { text: "2.1 After the Sun, the nearest star to the Earth is _________. [Bhogpur K.M. High School (H.S.), 2019]", answer: "Proxima Centauri / Alpha Centauri" },
         { text: "2.2 There is poisonous gas in _________. [Moyna Vivekananda Kanya Vidyapith, 2019]", answer: "Coal smoke / Vehicle exhaust" },
-        { text: "2.3 Coal for burning bricks comes from _________ coal mine.", answer: "Raniganj / Asansol" },
-        { text: "2.4 The telescope was invented by _________. [Alipurduar McWilliam Higher Secondary School (H.S.), 2019]", answer: "Galileo / Hans Lippershey" },
-        { text: "2.5 The name of one cash crop is _________.", answer: "Jute / Tea / Oilseed" },
-        { text: "2.6 Dead body of a fish _________ time.", answer: "floats after some" }
+        { text: "2.3 The name of one soft-stemmed plant is _________.", answer: "Banana / Papaya" },
+        { text: "2.4 _________ is a non-renewable energy.", answer: "Coal / Petroleum" },
+        { text: "2.5 The first train in India ran between _________ and _________ .", answer: "Bombay and Thane" },
+        { text: "2.6 The main food of the people of West Bengal is _________ .", answer: "Rice" }
       ]},
       { title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)", questions: [
-        { text: "3.1 The source of all our energy is the Moon. [Dainhat Uchcha Balika Vidyalaya (H.S.), 2019]", answer: "✗" },
-        { text: "3.2 Milk is obtained from the duck.", answer: "✗" },
-        { text: "3.3 The name of one poisonous gas is carbon monoxide.", answer: "✓" },
-        { text: "3.4 It is proper to ride a bicycle wearing an ISO marked helmet. [Lalit Mohan Shyam Mohini High School (H.S.), 2019]", answer: "✓" },
-        { text: "3.5 The island of Diu is located in the Arabian Sea.", answer: "✓" },
-        { text: "3.6 The elephant is a vertebrate animal.", answer: "✓" }
+        { text: "3.1 The Earth is the third planet of the solar system.", answer: "✓" },
+        { text: "3.2 Coal is a renewable resource.", answer: "✗" },
+        { text: "3.3 The sound of the heart is heard with a stethoscope.", answer: "✓" },
+        { text: "3.4 Tsunami is caused by earthquake under the sea.", answer: "✓" },
+        { text: "3.5 Child marriage is good for society.", answer: "✗" },
+        { text: "3.6 The Sun is a star.", answer: "✓" }
       ]},
       { title: "4. Answer in one sentence: (1×6=6)", questions: [
-        { text: "4.1 Write the names of two fish that have many bones. [Tamluk Hamilton High School, 2019]", answer: "Rui, Katla, Hilsa" },
-        { text: "4.2 In which year did Aila occur? [Sri Ramkrishna Sikshalaya, 2019]", answer: "2009" },
-        { text: "4.3 What is the name of the hydro-electric power station near Bhutan?", answer: "Chukha" },
-        { text: "4.4 What is the method of tea cultivation on the slopes of hills called? [Bardhaman Bidyarthi Bhaban Girls’ High School, 2019]", answer: "Terrace cultivation" },
-        { text: "4.5 What is the present name of the Paramadan forest? [Howrah Vivekananda Institution, 2019]", answer: "Local forest name" },
-        { text: "4.6 What is a total solar eclipse called?", answer: "Total solar eclipse" }
+        { text: "4.1 What is the main mineral resource of West Bengal?", answer: "Coal" },
+        { text: "4.2 Who directed the film ‘Pather Panchali’?", answer: "Satyajit Ray" },
+        { text: "4.3 How has the dinosaur disappeared from nature?", answer: "Due to natural disaster / climate change." },
+        { text: "4.4 Write one natural way to keep good health without medicine.", answer: "Exercise / yoga / walking." },
+        { text: "4.5 What is the name of the bird sanctuary in Raiganj?", answer: "Kulik Bird Sanctuary" },
+        { text: "4.6 What is called a bridge?", answer: "A structure connecting two places over a river or road." }
       ]},
       { title: "5. Answer in two-three sentences (any seven): (2×7=14)", questions: [
-        { text: "5.1 What is obtained from petroleum? [Katwa Kashiram Das Bidyayatan, 2019]", answer: "Petrol, diesel, kerosene, plastics, etc." },
-        { text: "5.2 What is a solar cooker? [Alipurduar Balika Siksha Mandir High School (H.S.), 2019]", answer: "A device that cooks food using sunlight." },
-        { text: "5.3 Why is it important to give importance to the opinions of children?", answer: "Children have rights and their views help in better decisions." },
-        { text: "5.4 Write three advantages of air transport.", answer: "Fastest, useful for long distances, can reach remote areas." },
-        { text: "5.5 What is papyrus?", answer: "Ancient writing material made from the papyrus plant." },
-        { text: "5.6 Write two rules of road safety. [Fanindra Deb Institution, 2019]", answer: "Use zebra crossing, wear helmet/seat belt, follow traffic signals." },
-        { text: "5.7 Write what you know about comets. [Jhargram Kumud Kumari Institution, 2019]", answer: "Celestial bodies with a glowing tail that orbit the Sun." },
-        { text: "5.8 If a shopkeeper gives less weight, where should the complaint be lodged?", answer: "Consumer Forum / Weights & Measures Department." }
+        { text: "5.1 Explain by drawing the positions of the Sun, Earth and Moon during a solar eclipse.", answer: "Sun-Moon-Earth alignment; Moon’s shadow falls on Earth." },
+        { text: "5.2 What harm does the oil and mobile of vehicles on the road do to the environment?", answer: "Pollutes soil, water and air." },
+        { text: "5.3 What harm is caused by the effect of acid rain?", answer: "Damages buildings, plants and aquatic life." },
+        { text: "5.4 Write about the source of the Ganga river.", answer: "Originates from Gangotri glacier in the Himalayas." },
+        { text: "5.5 Write two effects of earthquake.", answer: "Destruction of buildings and loss of life." },
+        { text: "5.6 What is a ball?", answer: "A spherical object used in games." },
+        { text: "5.7 Why should zebra crossing be used while crossing the road?", answer: "It is a safe place for pedestrians." },
+        { text: "5.8 Write the work of a potassium permanganate.", answer: "Used to purify water by killing germs." }
       ]},
       { title: "6. Answer in five-six sentences (any four): (3×4=12)", questions: [
-        { text: "6.1 What is the cause of acid rain?", answer: "Oxides of sulphur and nitrogen from factories and vehicles mix with rain water forming acid." },
-        { text: "6.2 In which year did a comet fall on Jupiter? Which scientists said this? [Paruldanga Nasaratpur Uchcha Vidyalaya (H.S.), 2019]", answer: "1994 (Shoemaker-Levy 9). Observed by many astronomers." },
-        { text: "6.3 What is called aquatic animal? Explain with diagram. [Malda Bibhuti Bhusan High School (H.S.), 2019]", answer: "Animals that live in water (fish, whale, etc.)." },
-        { text: "6.4 What is a footbridge?", answer: "A bridge for pedestrians only, usually over a road or river." },
-        { text: "6.5 What is a turbine?", answer: "A machine that converts the energy of fluid (water, steam, wind) into mechanical energy." }
+        { text: "6.1 Why is the Sun very necessary for us?", answer: "Source of light, heat and energy for all life on Earth." },
+        { text: "6.2 Write how water pollution can be reduced.", answer: "Do not throw waste into rivers; treat sewage; reduce chemicals." },
+        { text: "6.3 What is called weather and climate?", answer: "Weather is short-term atmospheric condition; climate is long-term average." },
+        { text: "6.4 Identify three parts of the picture of the Rui fish.", answer: "Head, body, tail (or fins, gills, scales)." },
+        { text: "6.5 What is an earthquake? What precautions should be taken during an earthquake?", answer: "Sudden shaking of Earth. Drop, Cover, Hold On; stay away from windows." }
+      ]}
+    ]
+  },
+  5: {
+    title: "MODEL SET-5",
+    time: "1 hour 30 minutes",
+    fullMarks: 50,
+    sections: [
+      { title: "1. Choose the correct answer: (1×6=6)", questions: [
+        { text: "1.1 For how many more years will the Sun give light to the Earth?", options: ["(a) 5000 crore", "(b) 50 crore", "(c) 2000 crore", "(d) 500 crore"], answer: "(d) 500 crore" },
+        { text: "1.2 The age for compulsory education of children is—", options: ["(a) 20 years", "(b) 10 years", "(c) 14 years", "(d) 18 years"], answer: "(c) 14 years" },
+        { text: "1.3 The maximum harm from coal smoke is to— [Namukandi High School, 2019]", options: ["(a) Eyes", "(b) Nose", "(c) Ears", "(d) Throat"], answer: "(a) Eyes" },
+        { text: "1.4 Tsunami is a word of which language?", options: ["(a) Japanese", "(b) Indian", "(c) Chinese", "(d) Greek"], answer: "(a) Japanese" },
+        { text: "1.5 Should child marriage be done?", options: ["(a) Yes", "(b) No", "(c) If done there is no harm", "(d) Not only once"], answer: "(b) No" },
+        { text: "1.6 The time taken for light to come from the Sun to the Earth is—", options: ["(a) 7 minutes", "(b) 10 minutes", "(c) 8 minutes", "(d) 9 minutes"], answer: "(c) 8 minutes" }
+      ]},
+      { title: "2. Fill in the blanks: (1×6=6)", questions: [
+        { text: "2.1 An endangered big bird is _________.", answer: "Great Indian Bustard / Hornbill" },
+        { text: "2.2 There are more rhinos in the _________ direction. [Moyna Vivekananda Kanya Vidyapith, 2019]", answer: "Eastern" },
+        { text: "2.3 _________ is made from charcoal.", answer: "Ink" },
+        { text: "2.4 Cooking can be done with _________.", answer: "biogas" },
+        { text: "2.5 When a comet comes, _________.", answer: "a bright tail is seen" },
+        { text: "2.6 One mineral substance other than coal is _________. [Kanchrapara Harnett High School (H.S.), 2019]", answer: "iron ore / limestone / petroleum" }
+      ]},
+      { title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)", questions: [
+        { text: "3.1 The first train ran in India on 14 June 1853.", answer: "✗" },
+        { text: "3.2 Phanimansa is a plant of the desert region.", answer: "✓" },
+        { text: "3.3 If food is left in the forest, the tiger does not come near.", answer: "✗" },
+        { text: "3.4 The sound of the heart can be understood with the help of a barometer.", answer: "✗" },
+        { text: "3.5 The bot tree is smaller than the tea plant.", answer: "✗" },
+        { text: "3.6 Sulphur dioxide is a poisonous gas. [Taki House Govt. S.M. School for Boys’, 2019]", answer: "✓" }
+      ]},
+      { title: "4. Answer in one sentence: (1×6=6)", questions: [
+        { text: "4.1 What is the main mineral resource of West Bengal? [Bardhaman Bidyarthi Bhaban Girls’ High School, 2019]", answer: "Coal" },
+        { text: "4.2 Who directed the film ‘Pather Panchali’? [Ashokenagar Banipith Girls’ High School (H.S.), 2019]", answer: "Satyajit Ray" },
+        { text: "4.3 How has the dinosaur disappeared from nature?", answer: "Due to sudden climate change / meteor impact / natural disaster." },
+        { text: "4.4 Write one natural way to keep good health without medicine. [Howrah Vivekananda Institution, 2019]", answer: "Regular exercise / yoga / walking in open air." },
+        { text: "4.5 What is the name of the bird sanctuary in Raiganj? [Aswininagar J.N. Mondal Institution (H.S.), 2019]", answer: "Kulik Bird Sanctuary / Raiganj Wildlife Sanctuary" },
+        { text: "4.6 What is called a bridge?", answer: "A structure that connects two places over a river, road or obstacle." }
+      ]},
+      { title: "5. Answer in two-three sentences (any seven): (2×7=14)", questions: [
+        { text: "5.1 Explain by drawing the positions of the Sun, Earth and Moon during a solar eclipse.", answer: "Sun – Moon – Earth in a straight line. Moon comes between Sun and Earth, casting its shadow on Earth." },
+        { text: "5.2 What harm does the oil and mobile of vehicles on the road do to the environment? [Ashokenagar Banipith Girls’ High School (H.S.), 2019]", answer: "Oil and mobile spill pollute soil and water. They also release harmful gases that cause air pollution." },
+        { text: "5.3 What harm is caused by the effect of acid rain?", answer: "Damages buildings, monuments, plants and aquatic life. Makes soil and water acidic." },
+        { text: "5.4 Write about the source of the Ganga river.", answer: "The Ganga originates from the Gangotri glacier in the Himalayas (Uttarakhand)." },
+        { text: "5.5 Write two effects of earthquake. [Midnapore Collegiate School, 2019]", answer: "Destruction of buildings and roads. Loss of life and property; can cause landslides and tsunamis." },
+        { text: "5.6 What is a ball? [Burdwan Municipal High School, 2019]", answer: "A spherical object used in games and sports (or the Earth is roughly spherical like a ball)." },
+        { text: "5.7 Why should zebra crossing be used while crossing the road?", answer: "It is a safe marked place for pedestrians. Vehicles are supposed to stop there, reducing accidents." },
+        { text: "5.8 Write the work of a potassium permanganate. [Taki House Govt. S.M. School for Boys’, 2019]", answer: "It is used to purify water by killing germs (disinfectant)." }
+      ]},
+      { title: "6. Answer in five-six sentences (any four): (3×4=12)", questions: [
+        { text: "6.1 Why is the Sun very necessary for us? [Hare School, 2019]", answer: "The Sun is the main source of light and heat. It is essential for photosynthesis in plants. It provides energy for life on Earth and drives weather and climate." },
+        { text: "6.2 Write how water pollution can be reduced.", answer: "Do not throw garbage or industrial waste into rivers. Treat sewage before releasing it. Use less chemical fertilisers and pesticides. Keep water bodies clean." },
+        { text: "6.3 What is called weather and climate? [Batanagar Sri Ramakrishna Ashram Vivekananda Vidyamandir, 2019]", answer: "Weather is the condition of the atmosphere at a particular place and time. Climate is the average weather condition of a place over a long period (many years)." },
+        { text: "6.4 Identify three parts of the picture of the Rui fish.", answer: "Head, body and tail. (Also fins, gills, scales – any three parts.)" },
+        { text: "6.5 What is an earthquake? What precautions should be taken during an earthquake? [Malda Bibhuti Bhusan High School (H.S.), 2019]", answer: "Sudden shaking of the Earth’s surface caused by movement of tectonic plates. Precautions: Drop, Cover and Hold On; stay away from windows and heavy objects; move to open space if possible." }
       ]}
     ]
   }
