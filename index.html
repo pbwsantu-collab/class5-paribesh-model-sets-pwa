@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0d47a1">
+  <meta name="description" content="Class 5 Environmental Studies Model Sets 1-30 - Interactive PWA with clickable answers and exam mode">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <title>Class 5 Paribesh Model Sets | Interactive PWA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+    <h1>Class 5 • Paribesh Model Sets</h1>
+    <button id="examModeBtn" class="exam-btn">Exam Mode: OFF</button>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2>Menu</h2>
+      <button id="closeMenu" class="close-btn">×</button>
+    </div>
+    <ul id="setList" class="set-list">
+      <!-- Sets 1-30 will be injected here -->
+    </ul>
+    <div class="sidebar-footer">
+      <p>English Translation<br>Intact Format • Clickable Answers</p>
+    </div>
+  </nav>
+
+  <div id="overlay" class="overlay"></div>
+
+  <main id="mainContent" class="main-content">
+    <section id="welcome" class="welcome">
+      <h2>Welcome to Class 5 Environmental Studies</h2>
+      <p>Model Question Sets 1 – 30 (Full English Translation)</p>
+      <ul>
+        <li>✅ Intact original format</li>
+        <li>✅ Click any question / option to reveal answer</li>
+        <li>✅ Menu to jump between sets</li>
+        <li>✅ Exam Mode (hides answers + timer)</li>
+      </ul>
+      <button id="startBtn" class="primary-btn">Start with Model Set 1</button>
+    </section>
+
+    <section id="setContainer" class="set-container hidden">
+      <div class="set-header">
+        <h2 id="setTitle">Model Set 1</h2>
+        <div class="timer" id="timer">01:30:00</div>
+      </div>
+      <div id="questionsArea" class="questions-area">
+        <!-- Questions injected by JS -->
+      </div>
+      <div class="nav-buttons">
+        <button id="prevSet" class="nav-btn">← Previous</button>
+        <button id="nextSet" class="nav-btn">Next →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Interactive PWA • Data from Tulsir Prashnasangi Right Track • Class 5</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(console.error);
+    }
+  </script>
+</body>
+</html>
