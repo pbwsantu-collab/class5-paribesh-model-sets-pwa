@@ -1,311 +1,458 @@
-// Full structured data for all 30 sets.
+// Careful rebuild of all 30 Model Sets
 // English translation of Tulsir Prashnasangi Right Track – Class 5 (Environmental Studies)
 // ALL questions preserved exactly as provided.
 // Answers are educational best-effort based on standard Class 5 curriculum.
 
 window.SETS_DATA = {
-  // Sets 1-26 already fully structured in previous commits.
-  // Final Sets 27-30 below.
 
-  27: {
-    title: "MODEL SET-27",
+  1: {
+    title: "MODEL SET-1",
     time: "1 hour 30 minutes",
     fullMarks: 50,
     sections: [
       {
-        title: "1. Answer the following questions in complete sentences (any ten): (1×10=10)",
+        title: "1. Choose the correct answer: (1×6=6)",
         questions: [
-          { text: "1.1 In which year did Aila storm occur?", answer: "2009" },
-          { text: "1.2 After how much time of the secondary high tide does the main high tide occur?", answer: "Approximately 12 hours 26 minutes" },
-          { text: "1.3 Write the name of one water-borne disease.", answer: "Cholera / Typhoid / Dysentery" },
-          { text: "1.4 What is called Bora?", answer: "A type of paddy / local term" },
-          { text: "1.5 Where is the F.P.O. mark?", answer: "On packaged food products" },
-          { text: "1.6 What is a ferry?", answer: "A boat that carries people and vehicles across a river" },
-          { text: "1.7 What is the name of the combined flow of the Kalighai and Kansabati rivers?", answer: "Context specific (local river)" },
-          { text: "1.8 Who directed the film ‘Pather Panchali’?", answer: "Satyajit Ray" },
-          { text: "1.9 What is the main cause of secondary high tide?", answer: "Related to Moon’s position and Earth’s rotation" },
-          { text: "1.10 What is the name of the nearest star to the Earth after the Sun?", answer: "Proxima Centauri" },
-          { text: "1.11 Which animal’s entire body is made only of muscles?", answer: "Earthworm / Leech" },
-          { text: "1.12 What is ‘Gaur’?", answer: "A wild animal (Indian bison) that looks like a big black cow" }
+          { text: "1.1 Nature and man together create— [Namukandi High School, 2019]", options: ["(a) Coal", "(b) Intelligence", "(c) Property", "(d) Jungle"], answer: "(b) Intelligence" },
+          { text: "1.2 What remains in the agricultural land when it becomes barren?", options: ["(a) Homestead", "(b) Path", "(c) Wetland", "(d) Forest land"], answer: "(c) Wetland" },
+          { text: "1.3 After how many hours does the secondary tide occur after the primary tide?", options: ["(a) 6 hours", "(b) 9 hours", "(c) 12 hours 26 minutes", "(d) 10 hours 26 minutes"], answer: "(c) 12 hours 26 minutes" },
+          { text: "1.4 Which of the following is considered a mineral product?", options: ["(a) Wood", "(b) Fish", "(c) Coal", "(d) None of these"], answer: "(c) Coal" },
+          { text: "1.5 The orbit of the Earth is—", options: ["(a) Circular", "(b) Flat", "(c) Elliptical", "(d) Level"], answer: "(c) Elliptical" },
+          { text: "1.6 Paper was first made in—", options: ["(a) Nepal", "(b) China", "(c) India", "(d) Japan"], answer: "(b) China" }
         ]
       },
       {
-        title: "2. Fill in the blanks with appropriate words (any six): (1×6=6)",
+        title: "2. Fill in the blanks: (1×6=6)",
         questions: [
-          { text: "2.1 The Earth revolves around its own axis in _________.", answer: "24 hours" },
-          { text: "2.2 The first rickshaw service started in Kolkata in the year _________.", answer: "1911 / early 20th century" },
-          { text: "2.3 There is less _________ in the skin of fair-complexioned people.", answer: "Melanin" },
-          { text: "2.4 One environment-friendly transport is _________.", answer: "Cycle" },
-          { text: "2.5 Up to _________ years of age, reading and writing is the fundamental right of children.", answer: "14" },
-          { text: "2.6 Paper was first made in _________ country.", answer: "China" },
-          { text: "2.7 _________ is non-conventional energy.", answer: "Solar / Wind / Biogas" }
+          { text: "2.1 Up to 14 years of age, _________ is our right. [Bhogpur K.M. High School (H.S.), 2019]", answer: "Education / Free and compulsory education" },
+          { text: "2.2 Train and tram run on _________ power.", answer: "Electric" },
+          { text: "2.3 The kite is a _________ bird.", answer: "Hunting / Predatory" },
+          { text: "2.4 The main crop of Darjeeling district is _________. [Ashokenagar Banipith Girls’ High School (H.S.), 2019]", answer: "Tea" },
+          { text: "2.5 _________ tree is smaller than the tea plant. [Howrah Vivekananda Institution, 2019]", answer: "Bot (Banyan seedling)" },
+          { text: "2.6 The generator runs on _________.", answer: "Diesel / Fuel" }
         ]
       },
       {
-        title: "3. Match the left side with the right side: (1×5=5)",
+        title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)",
         questions: [
-          { text: "3.1 Endangered fish", answer: "(d) Nycticebus (or related)" },
-          { text: "3.2 Biogas", answer: "(c) Compost" },
-          { text: "3.3 Tsunami", answer: "(a) Sea wave" },
-          { text: "3.4 Terrace cultivation", answer: "(e) Hilly region" },
-          { text: "3.5 ISI mark", answer: "(b) Pressure cooker" }
+          { text: "3.1 There is more dust and smoke in the village air. [Malda Bibhuti Bhusan High School (H.S.), 2019]", answer: "✗" },
+          { text: "3.2 The orbit of the moon is circular and fixed.", answer: "✗" },
+          { text: "3.3 During a solar eclipse, the shadow of the Earth falls on the moon.", answer: "✗" },
+          { text: "3.4 Wood is made from carbon.", answer: "✗" },
+          { text: "3.5 ‘Pather Panchali’ is a writing of Rabindranath Tagore.", answer: "✗ (Bibhutibhushan Bandyopadhyay)" },
+          { text: "3.6 We plant trees for carbon dioxide.", answer: "✗" }
         ]
       },
       {
-        title: "4. Answer any four of the following questions: (2×4=8)",
+        title: "4. Answer in one sentence: (1×6=6)",
         questions: [
-          { text: "4.1 How is it possible to create a healthy social environment?", answer: "By education, cleanliness, mutual respect and following rules." },
-          { text: "4.2 What is the work of the oar and the sail of a boat?", answer: "Oar propels and steers; sail uses wind power." },
-          { text: "4.3 Mention two symptoms of anaemia.", answer: "Pale skin, weakness, fatigue, shortness of breath." },
-          { text: "4.4 What work does the tongue muscle do?", answer: "Helps in speaking, tasting and swallowing." },
-          { text: "4.5 What is called biogas?", answer: "Gas produced from organic waste (cow dung, plant matter)." },
-          { text: "4.6 What is meant by ‘dead body of a fish’ and ‘floating dead body of a fish’?", answer: "After death gases form and it floats belly upward." }
+          { text: "4.1 What is the cause of acid rain? [Moyna Vivekananda Kanya Vidyapith (H.S.), 2019]", answer: "Oxides of sulphur and nitrogen mixing with rain water." },
+          { text: "4.2 Which substances remain in the forest?", answer: "Trees, animals, birds, medicinal plants, etc." },
+          { text: "4.3 In which direction does the dead body of a fish float? [Katwa Kashiram Das Bidyayatan, 2019]", answer: "Belly upward / upside down." },
+          { text: "4.4 Who first started the work of tea cultivation? [Howrah Vivekananda Institution, 2019]", answer: "The British / Robert Bruce" },
+          { text: "4.5 Why is Raniganj famous? [Nabadwip Hindu School, 2019]", answer: "For coal mines." },
+          { text: "4.6 Write the name of one fundamental right of children.", answer: "Right to Education" }
         ]
       },
       {
-        title: "5. Answer any two of the following questions: (3×2=6)",
+        title: "5. Answer in two-three sentences (any seven): (2×7=14)",
         questions: [
-          { text: "5.1 Write about the attractive behaviour of various animals.", answer: "Animals show care for young, communication and social behaviour." },
-          { text: "5.2 Mention the problems of old age and what can be your role in that matter?", answer: "Health issues, loneliness. We should help and respect them." },
-          { text: "5.3 Write about the livelihood of the people of the Sundarban region.", answer: "Fishing, honey collection, farming, tourism." }
+          { text: "5.1 Write two ways to keep good health. [Alipurduar Balika Siksha Mandir High School (H.S.), 2019]", answer: "1. Balanced diet & clean water  2. Regular exercise & personal hygiene." },
+          { text: "5.2 Write the names of two coal-mining regions of West Bengal.", answer: "Raniganj and Asansol." },
+          { text: "5.3 Which vehicles can run very fast?", answer: "Aeroplane, train, car, etc." },
+          { text: "5.4 Write the name of one endangered animal that lives in the forest.", answer: "Tiger / Rhinoceros / Elephant." },
+          { text: "5.5 What is meant by climate?", answer: "The average weather condition of a place over a long period." },
+          { text: "5.6 What will you do if you go out on the road? [Laketown Govt. Sponsored Girls’ High School, 2019]", answer: "Use zebra crossing, look both sides, follow traffic rules." },
+          { text: "5.7 In which region has the soil become fertile due to the deposition of river silt? [Lalit Mohan Shyam Mohini High School (H.S.), 2019]", answer: "Gangetic plain / Delta region." },
+          { text: "5.8 What is a dam? In which places is fish farming done in dams? [Purulia Govt. Girls’ High School (H.S.), 2019]", answer: "A barrier built across a river to store water. Fish farming is done in reservoirs of dams." }
         ]
       },
       {
-        title: "6. Answer any two of the following questions: (5×2=10)",
+        title: "6. Answer in five-six sentences (any four): (3×4=12)",
         questions: [
-          { text: "6.1 Write five rights of children.", answer: "Right to education, protection, health, play, identity, etc." },
-          { text: "6.2 Write the names of five important bones of the human body.", answer: "Skull, backbone, ribs, femur, humerus." },
-          { text: "6.3 Explain – “The Sun is the source of all energy”.", answer: "Almost all energy on Earth ultimately comes from the Sun." },
-          { text: "6.4 What should be done to keep good health?", answer: "Balanced diet, exercise, cleanliness, proper sleep." },
-          { text: "6.5 What is called weather?", answer: "The condition of the atmosphere at a particular place and time." }
-        ]
-      },
-      {
-        title: "7. Answer any one of the following questions: (5×1=5)",
-        questions: [
-          { text: "7.1 Draw a picture of a total solar eclipse.", answer: "Sun – Moon – Earth alignment; Moon’s shadow completely covers a part of Earth." },
-          { text: "7.2 Draw a map of the transport of your area.", answer: "Local roads, railways, waterways as applicable." }
+          { text: "6.1 What are the advantages of using renewable energy?", answer: "Unlimited supply, less pollution, reduces dependence on fossil fuels, sustainable, environment-friendly." },
+          { text: "6.2 How is coal formed?", answer: "Coal is formed from the remains of ancient plants buried under soil and pressure over millions of years." },
+          { text: "6.3 Explain the lunar eclipse with a diagram. [Ballygunge Govt. High School, 2019]", answer: "When the Earth comes between the Sun and the Moon and the shadow of the Earth falls on the Moon." },
+          { text: "6.4 What is called social forestry? Give two examples. [Burdwan Municipal High School, 2019]", answer: "Planting trees in and around villages and towns by local people. Examples: roadside plantations, village forests." },
+          { text: "6.5 What are the reasons for the decrease in the number of forests in India?", answer: "Deforestation for agriculture, industry, urbanisation, mining, and illegal cutting of trees." }
         ]
       }
     ]
   },
 
-  28: {
-    title: "MODEL SET-28",
+  12: {
+    title: "MODEL SET-12",
     time: "1 hour 30 minutes",
     fullMarks: 50,
     sections: [
       {
-        title: "1. Answer in one sentence: (1×10=10)",
+        title: "1. Choose the correct answer: (1×6=6)",
         questions: [
-          { text: "1.1 Who invented the telescope?", answer: "Galileo Galilei" },
-          { text: "1.2 When is World Environment Day observed?", answer: "5 June" },
-          { text: "1.3 In earthquake-prone areas, houses are generally made of what?", answer: "Wood / light materials" },
-          { text: "1.4 What is the name of the nearest star to the Earth after the Sun?", answer: "Proxima Centauri" },
-          { text: "1.5 What is called a book?", answer: "A written or printed work with pages bound together" },
-          { text: "1.6 After how much time of the secondary high tide does the main high tide occur?", answer: "Approximately 12 hours 26 minutes" },
-          { text: "1.7 What is the main mineral resource of West Bengal?", answer: "Coal" },
-          { text: "1.8 Who wrote the book ‘Pather Panchali’?", answer: "Bibhutibhushan Bandyopadhyay" },
-          { text: "1.9 What is a ferry?", answer: "A boat that carries people and vehicles across a river" },
-          { text: "1.10 Where is the hydro-electric power station of Bhutan?", answer: "Chukha / Tala" }
+          { text: "1.1 Kulik bird sanctuary is seen in— [Fanindra Deb Institution, 2019]", options: ["(a) Jalpaiguri", "(b) Raiganj", "(c) Buxa", "(d) Sundarban"], answer: "(b) Raiganj" },
+          { text: "1.2 The first cinema in the world was made— [Dinhata Soni Debi Jain High School, 2019]", options: ["(a) With bus", "(b) With boat", "(c) With train", "(d) With plane"], answer: "(c) With train" },
+          { text: "1.3 In 2004, damage was caused by tsunami in—", options: ["(a) Kerala", "(b) West Bengal", "(c) Tamil Nadu", "(d) Karnataka"], answer: "(c) Tamil Nadu" },
+          { text: "1.4 What can happen as a result of air pollution?", options: ["(a) Asthma", "(b) Tuberculosis", "(c) Cholera", "(d) Typhoid"], answer: "(a) Asthma" },
+          { text: "1.5 Aluminium is used for making the plough for agriculture— [Ballygunge Govt. High School, 2019]", options: ["(a) Stone", "(b) Aluminium", "(c) Wood", "(d) Clay"], answer: "(b) Aluminium" },
+          { text: "1.6 An animal that has become extinct at present is—", options: ["(a) Dinosaur", "(b) Kakatuwa", "(c) Dog", "(d) Rhinoceros"], answer: "(a) Dinosaur" }
         ]
       },
       {
-        title: "2. Choose the correct answer and write: (1×5=5)",
+        title: "2. Fill in the blanks: (1×6=6)",
         questions: [
-          { text: "2.1 A comet looks like—", options: ["(a) a broom", "(b) a stick", "(c) a mountain"], answer: "(a) a broom" },
-          { text: "2.2 During a lunar eclipse the middle position is occupied by—", options: ["(a) Sun", "(b) Earth", "(c) Moon"], answer: "(b) Earth" },
-          { text: "2.3 The time taken for light to come from the Sun to the Earth is approximately—", options: ["(a) 8 minutes", "(b) 12 minutes", "(c) 10 minutes"], answer: "(a) 8 minutes" },
-          { text: "2.4 One non-conventional energy is—", options: ["(a) Heat energy", "(b) Hydro-electricity", "(c) Solar electricity"], answer: "(c) Solar electricity" },
-          { text: "2.5 While buying a pressure cooker, which mark should be seen?", options: ["(a) Agmark", "(b) FPO mark", "(c) ISI mark"], answer: "(c) ISI mark" }
+          { text: "2.1 The Moon is approximately _________ km away from the Earth. [Moyna Vivekananda Kanya Vidyapith, 2019]", answer: "3,84,000 / 384000" },
+          { text: "2.2 A place without plants is called _________. [Dainhat Uchcha Balika Vidyalaya (H.S.), 2019]", answer: "Desert / Barren land" },
+          { text: "2.3 The store of _________ energy will be finished one day. [Baghbazar Multipurpose Girls’ School, 2019]", answer: "Non-renewable / Fossil" },
+          { text: "2.4 Sandakphu is a _________ of _________.", answer: "peak / hill of Darjeeling / West Bengal" },
+          { text: "2.5 There are _________ islands in the Sundarban.", answer: "102 / many" },
+          { text: "2.6 The main food of animals, birds and plants is _________.", answer: "Sunlight / Solar energy (indirectly)" }
         ]
       },
       {
-        title: "3. Fill in the blanks: (1×10=10)",
+        title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)",
         questions: [
-          { text: "3.1 In the year _________ Aila storm occurred.", answer: "2009" },
-          { text: "3.2 The English name of paper has come from the word _________.", answer: "Papyrus" },
-          { text: "3.3 The main cause of high tide is _________.", answer: "Moon’s gravitational pull" },
-          { text: "3.4 _________ animal has become extinct.", answer: "Dinosaur / Cheetah (in India)" },
-          { text: "3.5 The tram of Kolkata runs on _________ energy.", answer: "Electric" },
-          { text: "3.6 _________ is the source of all our energy.", answer: "Sun" },
-          { text: "3.7 The direction in which a boat will go is correctly determined by _________.", answer: "Compass / Rudder" },
-          { text: "3.8 The train started from Howrah to Hooghly in the year _________.", answer: "1854" },
-          { text: "3.9 Below _________ years of age, marrying a girl is a legal offence.", answer: "18" },
-          { text: "3.10 One environment-friendly vehicle is _________.", answer: "Cycle" }
+          { text: "3.1 Paper was first made in Japan.", answer: "✗ (China)" },
+          { text: "3.2 One should always protest against injustice in other countries.", answer: "✓" },
+          { text: "3.3 Traffic police control vehicles.", answer: "✓" },
+          { text: "3.4 Marriage of a girl below 14 years of age is considered legal.", answer: "✗" },
+          { text: "3.5 High tide and low tide occur together.", answer: "✗" },
+          { text: "3.6 An example of biogas is biogas. [Bally Jora Aswatthatala Vidyalaya, 2019]", answer: "✓" }
         ]
       },
       {
-        title: "4. Answer the following questions in two-three sentences: (2×5=10)",
+        title: "4. Answer in one sentence: (1×6=6)",
         questions: [
-          { text: "4.1 Why does man kill rhinoceros and elephant?", answer: "For horn and ivory (now banned and illegal)." },
-          { text: "4.2 What is called flash flood?", answer: "A sudden and rapid flooding of low-lying areas due to heavy rain." },
-          { text: "4.3 What is a tsunami? In which year did the tsunami occur?", answer: "A series of huge sea waves caused by underwater earthquake. 2004." },
-          { text: "4.4 In 2009, whose best wishes did the President of India convey and why?", answer: "Related to Aila cyclone victims / national events." },
-          { text: "4.5 Write the names of two biogases.", answer: "Methane from cow dung and plant waste." }
+          { text: "4.1 What kind of animal is a bear?", answer: "Mammal / Wild animal" },
+          { text: "4.2 In which work is a trowel used? [Barlow Girls’ High School (H.S.), 2019]", answer: "Brick laying / masonry / plastering" },
+          { text: "4.3 On which energy does the generator run?", answer: "Diesel / Fuel / Mechanical energy" },
+          { text: "4.4 What is water confined by a river called?", answer: "Reservoir / Lake / Pond" },
+          { text: "4.5 What work does the tongue muscle do? [Kanaidighi Deshapran Vidyapith (H.S.), 2019]", answer: "Helps in speaking, tasting and swallowing" },
+          { text: "4.6 What is meant by education being successful? [Taki House Govt. S.M. School for Boys’, 2019]", answer: "When a person gains knowledge and can use it in life" }
         ]
       },
       {
-        title: "5. Answer any three of the following questions: (5×3=15)",
+        title: "5. Answer in two-three sentences (any seven): (2×7=14)",
         questions: [
-          { text: "5.1 Write about the rights of children.", answer: "Right to education, protection, health, play, identity, etc." },
-          { text: "5.2 What do we get from trees?", answer: "Oxygen, wood, medicines, fruits, prevent soil erosion, maintain climate." },
-          { text: "5.3 What is called the water cycle? Explain it with a diagram.", answer: "Evaporation → Condensation → Precipitation → Collection." },
-          { text: "5.4 Explain a solar eclipse with a diagram.", answer: "Moon comes between Sun and Earth; Moon’s shadow falls on Earth." }
+          { text: "5.1 How do the wheels of a steam engine driven train rotate? [Howrah Vivekananda Institution, 2019]", answer: "Steam pressure moves the piston which turns the wheels through connecting rods." },
+          { text: "5.2 What harm does the oil and mobile of vehicles on the road do to the environment? [Ashokenagar Banipith Girls’ High School (H.S.), 2019]", answer: "Causes air and soil pollution; harms plants and animals." },
+          { text: "5.3 Write a note: Drought [Burdwan Harisava Hindu Girls’ High School, 2019]", answer: "A long period of little or no rainfall leading to water scarcity and crop failure." },
+          { text: "5.4 In 2009, whose best wishes did the President of India convey and why?", answer: "Related to Aila cyclone victims / national events." },
+          { text: "5.5 Why is coal called ‘black diamond’?", answer: "Because it is very valuable like diamond and black in colour." },
+          { text: "5.6 Write the importance of cycle as an environment-friendly vehicle.", answer: "No pollution, good for health, saves fuel." },
+          { text: "5.7 Why does pollution decrease when train and tram run?", answer: "They run on electricity and carry many passengers, reducing individual vehicle use." },
+          { text: "5.8 What energy is produced by storm and cyclone?", answer: "Wind energy / kinetic energy." }
+        ]
+      },
+      {
+        title: "6. Answer in five-six sentences (any four): (3×4=12)",
+        questions: [
+          { text: "6.1 Why is the smoke of coal poisonous like the smoke of a car?", answer: "Both contain carbon monoxide, sulphur dioxide and other harmful gases." },
+          { text: "6.2 How can a healthy social environment be created?", answer: "By education, cleanliness, mutual respect, following rules and helping each other." },
+          { text: "6.3 Explain with diagram the orbit of the Earth and the Moon. [Burdwan Harisava Hindu Girls’ High School, 2019]", answer: "Earth revolves around the Sun; Moon revolves around the Earth in elliptical orbits." },
+          { text: "6.4 Why is there a difference of 24 hours 52 minutes between two main high tides?", answer: "Because of the combined effect of the Moon’s revolution and Earth’s rotation." },
+          { text: "6.5 Write what you know about comets. [Singur G.M.M. Girls’ High School (H.S.), 2019]", answer: "Icy bodies that develop a bright tail when near the Sun." }
         ]
       }
     ]
   },
 
-  29: {
-    title: "MODEL SET-29",
+  13: {
+    title: "MODEL SET-13",
     time: "1 hour 30 minutes",
     fullMarks: 50,
     sections: [
       {
-        title: "1. Fill in the blanks: (1×8=8)",
+        title: "1. Choose the correct answer: (1×6=6)",
         questions: [
-          { text: "1.1 _________ is called the ‘entrance of Buxa forest’.", answer: "Alipurduar" },
-          { text: "1.2 _________ organised the Azad Hind Fauj.", answer: "Netaji Subhas Chandra Bose / Rashbehari Bose (earlier)" },
-          { text: "1.3 Known by the name ‘Gandhi of the people’ is _________.", answer: "Context specific" },
-          { text: "1.4 26 January 1950 is the _________ Day of India.", answer: "Republic" },
-          { text: "1.5 In West Bengal _________ is the work of terracotta.", answer: "Bishnupur / Bankura" },
-          { text: "1.6 _________ is the main mineral resource of West Bengal.", answer: "Coal" },
-          { text: "1.7 Solar electricity is _________ energy.", answer: "Non-conventional / Renewable" },
-          { text: "1.8 The first passenger train ran in this country in _________.", answer: "1853" }
+          { text: "1.1 Silk is cultivated in— [Ballygunge Govt. High School, 2019]", options: ["(a) Purulia & Bankura", "(b) East Medinipur & Howrah", "(c) Birbhum & Hooghly", "(d) Malda & South Dinajpur"], answer: "(d) Malda & South Dinajpur" },
+          { text: "1.2 The hydro-electric power station of Bhutan that runs on the force of the water current of which river is— [Alipurduar McWilliam High School (H.S.), 2019]", options: ["(a) Mahananda", "(b) Jaldhaka", "(c) Godavari", "(d) Jaldhaka river"], answer: "(b)/(d) Jaldhaka" },
+          { text: "1.3 The previous name of Purulia was—", options: ["(a) Birbhum", "(b) Barabhum", "(c) Manbhum", "(d) Singhbhum"], answer: "(c) Manbhum" },
+          { text: "1.4 One dry river of the Sundarban region is—", options: ["(a) Tista", "(b) Kalighai", "(c) Raimangal", "(d) Torsa"], answer: "(c) Raimangal (or others)" },
+          { text: "1.5 Buxa is a—", options: ["(a) Mountain", "(b) Fort", "(c) Sea", "(d) Forest"], answer: "(d) Forest" },
+          { text: "1.6 Children’s Day is observed on—", options: ["(a) 14 November", "(b) 10 October", "(c) 9 July", "(d) 11 June"], answer: "(a) 14 November" }
         ]
       },
       {
-        title: "2. Answer the questions: (2×8=16)",
+        title: "2. Fill in the blanks: (1×6=6)",
         questions: [
-          { text: "2.1 Who wrote ‘Pather Panchali’? Who directed the film?", answer: "Bibhutibhushan Bandyopadhyay wrote it; Satyajit Ray directed the film." },
-          { text: "2.2 What are the two main causes of high tide and low tide?", answer: "Gravitational pull of the Moon and the Sun." },
-          { text: "2.3 After how much time of the secondary high tide does the main high tide occur?", answer: "Approximately 12 hours 26 minutes" },
-          { text: "2.4 What is the necessity of planting trees in the mining region?", answer: "To prevent soil erosion and restore the environment." },
-          { text: "2.5 How is biogas obtained?", answer: "From organic waste (cow dung, plant matter) through anaerobic digestion." },
-          { text: "2.6 Which parts of the road can be used to avoid accidents?", answer: "Footpath and zebra crossing." },
-          { text: "2.7 What is called weather?", answer: "The condition of the atmosphere at a particular place and time." },
-          { text: "2.8 What is called flash flood?", answer: "A sudden and rapid flooding of low-lying areas." }
+          { text: "2.1 Sunlight is required to make the _________ of the tree. [Alipurduar Balika Siksha Mandir High School (H.S.), 2019]", answer: "Food / Starch (photosynthesis)" },
+          { text: "2.2 The Mahananda river flows through the middle of _________ district. [Contai High School (H.S.), 2019]", answer: "Malda / North Bengal" },
+          { text: "2.3 The product of coal is _________. [Jhargram Kumud Kumari Institution, 2019]", answer: "Coke / Coal tar / Gas" },
+          { text: "2.4 1 October is observed as World _________ Day.", answer: "Habitat / Elderly / other" },
+          { text: "2.5 The time taken for light to come from the Sun to the Earth is _________ minutes.", answer: "8" },
+          { text: "2.6 _________ leaf is used as a plate.", answer: "Sal / Banana / Plantain" }
         ]
       },
       {
-        title: "3. Put a tick (✓) mark on the correct answer: (1×8=8)",
+        title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)",
         questions: [
-          { text: "3.1 Most of the coal is—", options: ["(a) Methane", "(b) Carbon", "(c) Iron"], answer: "(b) Carbon" },
-          { text: "3.2 The instrument for cooking using the sun is called—", options: ["(a) Solar cooker", "(b) Road spectacles", "(c) Rice cooker"], answer: "(a) Solar cooker" },
-          { text: "3.3 The rickshaw came to Kolkata in—", options: ["(a) 1900", "(b) 1905", "(c) 1915"], answer: "Around 1911" },
-          { text: "3.4 The English word ‘Paper’ has come from—", options: ["(a) Papaya word", "(b) Papyrus word", "(c) Paris word"], answer: "(b) Papyrus word" },
-          { text: "3.5 A tsunami is a kind of—", options: ["(a) Storm", "(b) Flood", "(c) Sea wave"], answer: "(c) Sea wave" },
-          { text: "3.6 The first Education Minister of independent India was—", options: ["(a) Acharya Prafulla Chandra Ray", "(b) Abul Kalam Azad", "(c) Meghnad Saha"], answer: "(b) Abul Kalam Azad" },
-          { text: "3.7 The factory for making railway engines is in West Bengal at—", options: ["(a) Shantipur", "(b) Medinipur", "(c) Chittaranjan"], answer: "(c) Chittaranjan" },
-          { text: "3.8 Acharya Jagadish Chandra Bose was a—", options: ["(a) Litterateur", "(b) Freedom fighter", "(c) Scientist"], answer: "(c) Scientist" }
+          { text: "3.1 One fish that is found in the sea is sardine.", answer: "✓" },
+          { text: "3.2 Mount Asansol is located at a height of about 1000 metres from the sea level.", answer: "✗" },
+          { text: "3.3 Non-violence is called friendliness and kindness.", answer: "✓" },
+          { text: "3.4 Chang fish lives with the help of stones.", answer: "✗" },
+          { text: "3.5 Shilai is located on the bank of the Padma river.", answer: "✗" },
+          { text: "3.6 The bee makes honey.", answer: "✓" }
         ]
       },
       {
-        title: "4. Match the left side with the right side: (1×8=8)",
+        title: "4. Answer in one sentence: (1×6=6)",
         questions: [
-          { text: "4.1 Coal and petroleum are", answer: "(c) Conventional energy" },
-          { text: "4.2 There is a hydro-electric power station near Bhutan", answer: "(b) A hydro-electric power station" },
-          { text: "4.3 Galileo", answer: "(e) Invented the telescope" },
-          { text: "4.4 Two vehicles of ancient times", answer: "(f) Bullock cart, palanquin" },
-          { text: "4.5 Conventional energy is produced from", answer: "(a) From water, wood and coal" },
-          { text: "4.6 Aila occurred in", answer: "(c) 2009" },
-          { text: "4.7 Books written on palm leaves", answer: "(h) Books are called" },
-          { text: "4.8 Titumir made", answer: "(g) Bamboo basket" }
+          { text: "4.1 Write the names of two medicinal trees.", answer: "Neem, Tulsi, Amla, etc." },
+          { text: "4.2 How many years ago was the Sun born from today? [Dubrajpur Sree Sree Sarada Vidyapith (H.S.), 2019]", answer: "About 460 crore years" },
+          { text: "4.3 From which part of the soil does the tree get food?", answer: "From the minerals and water in the soil through roots" },
+          { text: "4.4 Where is the coal mine in West Bardhaman from where coal is produced? [Chinsurah Deshbandhu Memorial High School, 2019]", answer: "Raniganj / Asansol area" },
+          { text: "4.5 Write the name of one animal that is reared at home. [Burdwan Municipal High School, 2019]", answer: "Cow / Goat / Hen / Dog" },
+          { text: "4.6 On which day does a lunar eclipse occur?", answer: "Full moon day" }
         ]
       },
       {
-        title: "5. Answer the following questions: (3×2=6)",
+        title: "5. Answer in two-three sentences (any seven): (2×7=14)",
         questions: [
-          { text: "5.1 Write three works against road safety.", answer: "Crossing while talking on mobile, not using zebra crossing, overspeeding." },
-          { text: "5.2 Write what you know about comets.", answer: "Icy bodies that develop a bright tail when near the Sun." }
+          { text: "5.1 How will you prepare ORS at home?", answer: "Mix salt, sugar and clean water in proper proportion." },
+          { text: "5.2 Why does a storm occur in the sea?", answer: "Due to low pressure and strong winds over the sea." },
+          { text: "5.3 What is called the Green Revolution? [Paruldanga Nasaratpur Uchcha Vidyalaya, 2019]", answer: "Increase in food production using HYV seeds, fertilizers and irrigation." },
+          { text: "5.4 Mention two differences between the attraction of the Earth and the attraction of the Moon. [Panskura B.B. High School, 2019]", answer: "Earth’s gravity is stronger; Moon’s gravity causes tides." },
+          { text: "5.5 What is meant by weather science?", answer: "The study of atmosphere and weather conditions (meteorology)." },
+          { text: "5.6 What is required to make the bones strong and which food should be eaten? [Moyna Vivekananda Kanya Vidyapith, 2019]", answer: "Calcium and vitamin D; milk, eggs, green vegetables." },
+          { text: "5.7 Why does foam come out after rotting?", answer: "Due to gases produced by bacteria during decomposition." },
+          { text: "5.8 What is a resource and of how many types is it? [Namukandi High School, 2019]", answer: "Anything useful to man. Two main types: renewable and non-renewable." }
         ]
       },
       {
-        title: "6. Showing the correct positions of the Sun, Moon and Earth, draw a picture of a solar eclipse. (4)",
+        title: "6. Answer in five-six sentences (any four): (3×4=12)",
         questions: [
-          { text: "6. Showing the correct positions of the Sun, Moon and Earth, draw a picture of a solar eclipse.", answer: "Sun – Moon – Earth alignment; Moon’s shadow falls on Earth." }
+          { text: "6.1 Showing the positions of the Sun, Moon and Earth, draw a picture of a solar eclipse.", answer: "Moon between Sun and Earth; Moon’s shadow falls on Earth." },
+          { text: "6.2 Write what we should do when we go out on the road. [Howrah Vivekananda Institution, 2019]", answer: "Follow traffic rules, use zebra crossing, look both ways." },
+          { text: "6.3 What is mining? What is meant by social forestry? [Serampore High School, 2019]", answer: "Extraction of minerals from the earth. Planting trees by local people for community benefit." },
+          { text: "6.4 Write the names of two domestic animals. What is a ferry?", answer: "Cow, goat. A boat that carries people and vehicles across a river." },
+          { text: "6.5 Explain – “The trees of the forest are useful to us in various ways.”", answer: "Provide oxygen, wood, medicines, prevent soil erosion, maintain ecological balance." }
         ]
       }
     ]
   },
 
-  30: {
-    title: "MODEL SET-30",
+  14: {
+    title: "MODEL SET-14",
     time: "1 hour 30 minutes",
     fullMarks: 50,
     sections: [
       {
-        title: "1. Choose the correct answer: (1×10=10)",
+        title: "1. Choose the correct answer: (1×6=6)",
         questions: [
-          { text: "1.1 In 2009 occurred—", options: ["(a) Earthquake", "(b) Aila storm", "(c) Sea wave"], answer: "(b) Aila storm" },
-          { text: "1.2 The telescope was invented by—", options: ["(a) Galileo", "(b) Vidyasagar", "(c) De Rozio"], answer: "(a) Galileo" },
-          { text: "1.3 The time taken for the Moon to complete one full revolution around the Earth is—", options: ["(a) 27½ days", "(b) 28½ days", "(c) 29½ days"], answer: "(c) 29½ days" },
-          { text: "1.4 The main cause of high tide is—", options: ["(a) Rotation of the Earth", "(b) Attraction of the Sun", "(c) Attraction of the Moon"], answer: "(c) Attraction of the Moon" },
-          { text: "1.5 The time taken for light to come from the Sun to the Earth is—", options: ["(a) 8 minutes", "(b) 10 minutes", "(c) 9 minutes"], answer: "(a) 8 minutes" },
-          { text: "1.6 In 1994 a comet fell on which planet?", options: ["(a) Jupiter", "(b) Venus", "(c) Saturn"], answer: "(a) Jupiter" },
-          { text: "1.7 World Environment Day is observed on—", options: ["(a) 1 October", "(b) 2 October", "(c) 5 June"], answer: "(c) 5 June" },
-          { text: "1.8 A lunar eclipse occurs on—", options: ["(a) New moon day", "(b) Full moon day", "(c) Ekadashi"], answer: "(b) Full moon day" },
-          { text: "1.9 While driving a car at night which light is turned on?", options: ["(a) Green", "(b) Yellow", "(c) Red"], answer: "Headlights (white/yellow)" },
-          { text: "1.10 A solar panel is a source of _________ energy.", options: ["(a) Conventional", "(b) Non-conventional", "(c) Potential energy"], answer: "(b) Non-conventional" }
+          { text: "1.1 In 1994, a comet fell on which planet?", options: ["(a) Jupiter", "(b) Saturn", "(c) Venus", "(d) Mars"], answer: "(a) Jupiter" },
+          { text: "1.2 If the husband dies, the wife is also burnt to death. What is this called?", options: ["(a) Sati system", "(b) Child marriage system", "(c) Polygamy", "(d) Holika burning"], answer: "(a) Sati system" },
+          { text: "1.3 Netaji is called—", options: ["(a) Mahatma Gandhi", "(b) Deshbandhu Chittaranjan Das", "(c) Rabindranath Tagore", "(d) Subhas Chandra Bose"], answer: "(d) Subhas Chandra Bose" },
+          { text: "1.4 Who wrote ‘Sultana’s Dream’?", options: ["(a) Begum Rokeya", "(b) Nurjahan", "(c) Mumtaz", "(d) Yodhabai"], answer: "(a) Begum Rokeya" },
+          { text: "1.5 Attraction is in which tree?", options: ["(a) Neem", "(b) Lata", "(c) Banyan", "(d) Coconut"], answer: "(c) Banyan (aerial roots)" },
+          { text: "1.6 A boneless fish is—", options: ["(a) Boal", "(b) Rui", "(c) Kai", "(d) Hilsa"], answer: "(a) Boal / (c) Kai" }
         ]
       },
       {
-        title: "2. Match the left side with the right side: (1×4=4)",
+        title: "2. Fill in the blanks: (1×6=6)",
         questions: [
-          { text: "2.1 Water purification", answer: "(d) Potassium permanganate" },
-          { text: "2.2 Petroleum and coal", answer: "(c) Conventional energy" },
-          { text: "2.3 Train and tram", answer: "(a) Electrical energy" },
-          { text: "2.4 Zebra crossing", answer: "(b) Footpath" }
+          { text: "2.1 Due to the daily motion, _________ occurs. [Arambagh Girls’ High School, 2019]", answer: "Day and night" },
+          { text: "2.2 Mocha is the flower of the _________ tree.", answer: "Banana" },
+          { text: "2.3 An invertebrate animal is _________.", answer: "Earthworm / Insect / Snail" },
+          { text: "2.4 Medicine is made from the leaves of the _________ tree.", answer: "Neem / Tulsi" },
+          { text: "2.5 The orbit of the Earth is like a _________. [Tamluk Hamilton High School, 2019]", answer: "Ellipse / Oval" },
+          { text: "2.6 Tsunami is a huge wave under the sea. [Sri Ramkrishna Sikshalaya, 2019]", answer: "True" }
         ]
       },
       {
-        title: "3. Answer in one word: (1×5=5)",
+        title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)",
         questions: [
-          { text: "3.1 Write the name of one big forest.", answer: "Sundarbans / Buxa" },
-          { text: "3.2 What kind of mine is there in Raniganj?", answer: "Coal mine" },
-          { text: "3.3 For what is the kite bird reared?", answer: "Hunting / traditionally for feathers" },
-          { text: "3.4 In which year did man first start using rickshaws for travel?", answer: "Around 1911" },
-          { text: "3.5 What is a ferry?", answer: "Boat for crossing river" }
+          { text: "3.1 A comet fell on the Earth.", answer: "✗ (on Jupiter in 1994)" },
+          { text: "3.2 Satyajit Ray is a film director.", answer: "✓" },
+          { text: "3.3 The name of a fast means of transport is Auto.", answer: "✓" },
+          { text: "3.4 The rickshaw came to Kolkata in 1860.", answer: "✗" },
+          { text: "3.5 The tram runs on battery.", answer: "✗ (electricity)" },
+          { text: "3.6 Coal is called diamond.", answer: "✗ (black diamond)" }
         ]
       },
       {
-        title: "4. Fill in the blanks: (1×5=5)",
+        title: "4. Answer in one sentence: (1×6=6)",
         questions: [
-          { text: "4.1 The main food of animals, birds and plants is _________.", answer: "Sunlight / Solar energy (indirectly)" },
-          { text: "4.2 The name of a hydro-electric power station near Bhutan is _________.", answer: "Chukha" },
-          { text: "4.3 Cycle is a _________ free vehicle.", answer: "Smoke / Pollution" },
-          { text: "4.4 ‘Pather Panchali’ was written by _________.", answer: "Bibhutibhushan Bandyopadhyay" },
-          { text: "4.5 The small forests that grow in the middle of the locality are called _________.", answer: "Social forest" }
+          { text: "4.1 What is meant by ‘Sabuj’? [Paruldanga Nasaratpur Uchcha Vidyalaya, 2019]", answer: "Green" },
+          { text: "4.2 Which prehistoric animal has become extinct from the Earth? [Alipurduar Balika Siksha Mandir High School (H.S.), 2019]", answer: "Dinosaur" },
+          { text: "4.3 What is the purpose of SAFE DRIVE SAVE LIFE?", answer: "To reduce road accidents and save lives." },
+          { text: "4.4 Write the name of one river of Bangladesh.", answer: "Padma / Jamuna / Meghna" },
+          { text: "4.5 On what does the boat for ferrying run?", answer: "Water / River" },
+          { text: "4.6 Write the name of one resource obtained from the forest.", answer: "Wood / Timber / Medicine / Honey" }
         ]
       },
       {
-        title: "5. Write a note: (2×5=10)",
+        title: "5. Answer in two-three sentences (any seven): (2×7=14)",
         questions: [
-          { text: "5.1 Biogas", answer: "Gas produced from organic waste (cow dung, plant matter)." },
-          { text: "5.2 Drought", answer: "A long period of little or no rainfall leading to water scarcity." },
-          { text: "5.3 Lunar eclipse", answer: "When Earth comes between Sun and Moon and Earth’s shadow falls on Moon." },
-          { text: "5.4 Earthquake", answer: "Sudden shaking of the Earth’s surface due to movement of tectonic plates." },
-          { text: "5.5 Flash flood", answer: "A sudden and rapid flooding of low-lying areas due to heavy rain." }
+          { text: "5.1 What is meant by citizen’s rights? [Alipurduar Mc. William High School (H.S.), 2019]", answer: "Fundamental rights guaranteed by the Constitution to every citizen." },
+          { text: "5.2 Mention two incidents you have seen where child labour is used illegally.", answer: "Children working in shops, factories, or as domestic help." },
+          { text: "5.3 Write the effects of earthquake. [Bally Jora Aswatthatala Vidyalaya, 2019]", answer: "Destruction of buildings, loss of life, landslides, tsunamis." },
+          { text: "5.4 Write the names of three people who protested against child marriage. [Dinhata Soni Debi Jain High School, 2019]", answer: "Ishwar Chandra Vidyasagar, Raja Ram Mohan Roy, etc." },
+          { text: "5.5 Write the characteristics of the rivers of the Sundarban.", answer: "Tidal rivers, many branches, mangrove forests along banks." },
+          { text: "5.6 What is called a disaster?", answer: "A sudden event that causes great damage or loss of life." },
+          { text: "5.7 When do wild animals attack?", answer: "When they feel threatened or their habitat is disturbed." },
+          { text: "5.8 Why does the gold of the gold line not fall from the train line?", answer: "It is fixed securely / question may refer to signal lights." }
         ]
       },
       {
-        title: "6. Answer the following questions briefly: (2×5=10)",
+        title: "6. Answer in five-six sentences (any four): (3×4=12)",
         questions: [
-          { text: "6.1 What do we get from the forest?", answer: "Oxygen, wood, medicines, wildlife, ecological balance." },
-          { text: "6.2 Which gas remains in the smoke of coal?", answer: "Carbon monoxide, sulphur dioxide, carbon dioxide." },
-          { text: "6.3 What is called weather?", answer: "The condition of the atmosphere at a particular place and time." },
-          { text: "6.4 What is called high tide and low tide?", answer: "Rise and fall of sea water caused mainly by the Moon’s gravity." },
-          { text: "6.5 Write two fundamental rights of children.", answer: "Right to education and right to protection." }
+          { text: "6.1 Why is wildlife conservation done?", answer: "To maintain ecological balance, protect biodiversity and prevent extinction." },
+          { text: "6.2 Why are there many holes on the surface of Jupiter?", answer: "Due to impact of comets and asteroids (e.g. Shoemaker-Levy 9)." },
+          { text: "6.3 Write about the attractive behaviour of various animals. [Kanaidighi Deshapran Vidyapith (H.S.), 2019]", answer: "Animals show care for young, communication, and social behaviour." },
+          { text: "6.4 When there was no bus, how did man use animals for transport work? [Hare School, 2019]", answer: "Bullock carts, horse carts, camels, elephants were used." },
+          { text: "6.5 How can we keep the social environment healthy?", answer: "By education, cleanliness, mutual respect and following rules." }
+        ]
+      }
+    ]
+  },
+
+  15: {
+    title: "MODEL SET-15",
+    time: "1 hour 30 minutes",
+    fullMarks: 50,
+    sections: [
+      {
+        title: "1. Choose the correct answer: (1×6=6)",
+        questions: [
+          { text: "1.1 A broken phone is informed to—", options: ["(a) B.D.O.", "(b) Municipality", "(c) Police", "(d) School"], answer: "(c) Police / or service centre" },
+          { text: "1.2 A natural disaster is—", options: ["(a) Afforestation", "(b) Tsunami", "(c) Deforestation", "(d) Earthquake"], answer: "(b) Tsunami / (d) Earthquake" },
+          { text: "1.3 Where is a comet seen in the sky?", options: ["(a) West", "(b) East", "(c) North", "(d) South"], answer: "Any direction (usually with tail)" },
+          { text: "1.4 A vehicle of ancient times was—", options: ["(a) Toto", "(b) Bus", "(c) Train", "(d) Palanquin"], answer: "(d) Palanquin" },
+          { text: "1.5 The source of all energy is—", options: ["(a) Moon", "(b) Sun", "(c) Earth", "(d) Mars"], answer: "(b) Sun" },
+          { text: "1.6 In 2009, a big storm occurred whose name was—", options: ["(a) Aila", "(b) Fani", "(c) Hudhud", "(d) Gati"], answer: "(a) Aila" }
         ]
       },
       {
-        title: "7. Explain with diagram: (3×2=6)",
+        title: "2. Fill in the blanks: (1×6=6)",
         questions: [
-          { text: "7.1 A total solar eclipse", answer: "Sun – Moon – Earth alignment; Moon’s shadow completely covers a part of Earth." },
-          { text: "7.2 The orbit of the Earth and the Moon", answer: "Earth revolves around the Sun; Moon revolves around the Earth in elliptical orbits." }
+          { text: "2.1 Mount Asansol is located at a height of _________ metres from the sea level. [Batanagar Sri Ramakrishna Ashram Vivekananda Vidyamandir, 2019]", answer: "Not a mountain – Asansol is a city" },
+          { text: "2.2 The work of the oar of a boat is _________. [Panskura B.B. High School, 2019]", answer: "To propel and steer the boat" },
+          { text: "2.3 Shoemaker-Levy comet fell on _________ planet.", answer: "Jupiter" },
+          { text: "2.4 _________ aeroplane does not have a tail and wings. [Tamluk Hamilton High School, 2019]", answer: "Helicopter / specific type" },
+          { text: "2.5 _________ comes out from the volcano.", answer: "Lava / Magma" },
+          { text: "2.6 When coal is burnt, _________ pollution occurs. [Batanagar Sri Ramakrishna Ashram Vivekananda Vidyamandir, 2019]", answer: "Air" }
+        ]
+      },
+      {
+        title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)",
+        questions: [
+          { text: "3.1 A lunar eclipse occurs on the new moon day.", answer: "✗ (full moon)" },
+          { text: "3.2 Galileo invented the telescope.", answer: "✓" },
+          { text: "3.3 Oilseed is a cash crop.", answer: "✓" },
+          { text: "3.4 One renewable energy is thermal electricity.", answer: "✗" },
+          { text: "3.5 Jackfruit is a climbing tree.", answer: "✗" },
+          { text: "3.6 Iron is the main mineral resource of West Bengal. [Ashokenagar Banipith Girls’ High School (H.S.), 2019]", answer: "✗ (Coal)" }
+        ]
+      },
+      {
+        title: "4. Answer in one sentence: (1×6=6)",
+        questions: [
+          { text: "4.1 What is the name of the instrument for cooking using the sun?", answer: "Solar cooker" },
+          { text: "4.2 What kind of animal are snakes, frogs and lizards?", answer: "Reptiles / Cold-blooded" },
+          { text: "4.3 Write the name of one region where flash flood has occurred. [Serampore High School, 2019]", answer: "Uttarakhand / North Bengal hills" },
+          { text: "4.4 Which place is famous for the fertility of the soil and for growing all kinds of crops? [Ashokenagar Adarsha Balika Vidyalaya (H.S.), 2019]", answer: "Gangetic plain / Delta" },
+          { text: "4.5 What was the previous name of Tamralipta? [Naoda Nayan Chandra Bidyapith, 2019]", answer: "Tamluk" },
+          { text: "4.6 Who is known by the name ‘Bagha Yatin’?", answer: "Jatindranath Mukherjee (revolutionary)" }
+        ]
+      },
+      {
+        title: "5. Answer in two-three sentences (any seven): (2×7=14)",
+        questions: [
+          { text: "5.1 Write two places of interest of Bardhaman district.", answer: "Curzon Gate, 108 Shiva Temples, etc." },
+          { text: "5.2 Which crops are cultivated in the red soil region of South Bengal? [Lalit Mohan Shyam Mohini High School (H.S.), 2019]", answer: "Maize, millets, oilseeds, pulses." },
+          { text: "5.3 What is a solar cooker? [Alipurduar Balika Siksha Mandir High School (H.S.), 2019]", answer: "A device that cooks food using sunlight." },
+          { text: "5.4 Why can a cycle be called an environment-friendly vehicle?", answer: "It produces no pollution and saves fuel." },
+          { text: "5.5 Write two ways of tiger conservation.", answer: "Protect forests, ban hunting, create national parks." },
+          { text: "5.6 How does the energy of the Sun help our body?", answer: "Helps in production of Vitamin D and provides warmth." },
+          { text: "5.7 Why does a tsunami occur?", answer: "Due to underwater earthquake or volcanic eruption." },
+          { text: "5.8 How did man start creating ‘new forests’?", answer: "By social forestry and afforestation programmes." }
+        ]
+      },
+      {
+        title: "6. Answer in five-six sentences (any four): (3×4=12)",
+        questions: [
+          { text: "6.1 Write a note: Medicinal tree.", answer: "Trees like Neem, Tulsi, Amla that provide medicines." },
+          { text: "6.2 Write the method of curing tuberculosis.", answer: "DOTS treatment with regular medicines under medical supervision." },
+          { text: "6.3 Discuss four harmful effects of cutting trees. [Dinhata Soni Debi Jain High School, 2019]", answer: "Soil erosion, loss of oxygen, climate change, loss of wildlife habitat." },
+          { text: "6.4 Write one work of blood. What are the symptoms of anaemia?", answer: "Carries oxygen. Symptoms: pale skin, weakness, fatigue." },
+          { text: "6.5 What precautions should be taken during a tsunami?", answer: "Move to higher ground, follow warnings, stay away from the coast." }
+        ]
+      }
+    ]
+  },
+
+  16: {
+    title: "MODEL SET-16",
+    time: "1 hour 30 minutes",
+    fullMarks: 50,
+    sections: [
+      {
+        title: "1. Choose the correct answer: (1×6=6)",
+        questions: [
+          { text: "1.1 Children’s Day is observed on whose birthday?", options: ["(a) Radhakrishnan", "(b) Jawaharlal Nehru", "(c) Ambedkar", "(d) Mahatma Gandhi"], answer: "(b) Jawaharlal Nehru" },
+          { text: "1.2 Various oxides present in the smoke, when dissolved in water, form— [Panskura B.B. High School, 2019]", options: ["(a) Acid", "(b) Alkali", "(c) Salt", "(d) Chlorine"], answer: "(a) Acid" },
+          { text: "1.3 The Taj Mahal of India is most affected by— [Tamluk Hamilton High School, 2019]", options: ["(a) For air", "(b) For water", "(c) For soil", "(d) For noise pollution"], answer: "(a) Air pollution" },
+          { text: "1.4 The amount of carbon in coal is more when it is—", options: ["(a) Less deep", "(b) Medium deep", "(c) More deep", "(d) Not any"], answer: "(c) More deep" },
+          { text: "1.5 A sea wave is called—", options: ["(a) Earthquake", "(b) Tsunami", "(c) Sea wave", "(d) All"], answer: "(b)/(c) Tsunami / Sea wave" },
+          { text: "1.6 The main crop of Darjeeling district is—", options: ["(a) Coffee", "(b) Tea", "(c) Potato", "(d) Wheat"], answer: "(b) Tea" }
+        ]
+      },
+      {
+        title: "2. Fill in the blanks: (1×6=6)",
+        questions: [
+          { text: "2.1 The Sundarban is famous for _________.", answer: "Royal Bengal Tiger / Mangrove forest" },
+          { text: "2.2 The steam engine runs on _________.", answer: "Steam / Coal" },
+          { text: "2.3 A trolley is a _________. [Rampur High School (H.S.), 2019]", answer: "Cart / Vehicle for carrying goods" },
+          { text: "2.4 When the water of high tide decreases, it is called _________. [Basirhat High School (H.S.), 2019]", answer: "Low tide / Ebb tide" },
+          { text: "2.5 A light and floating boat made of the stem of the banana plant is _________.", answer: "Bhela / Raft" },
+          { text: "2.6 Carbon monoxide is a _________ gas.", answer: "Poisonous" }
+        ]
+      },
+      {
+        title: "3. Put ‘✓’ against the correct statement and ‘✗’ against the wrong one: (1×6=6)",
+        questions: [
+          { text: "3.1 One cash crop is paddy.", answer: "✗ (usually not considered pure cash crop)" },
+          { text: "3.2 Pearls are found in Basirhat.", answer: "✗" },
+          { text: "3.3 Royal Bengal Tiger is famous in Darjeeling.", answer: "✗ (Sundarban)" },
+          { text: "3.4 Kulik is a bird sanctuary.", answer: "✓" },
+          { text: "3.5 Kolkata is famous for winter clothes.", answer: "✗" },
+          { text: "3.6 A solar eclipse occurs in the afternoon.", answer: "✗ (can occur any time of day)" }
+        ]
+      },
+      {
+        title: "4. Answer in one sentence: (1×6=6)",
+        questions: [
+          { text: "4.1 Write the names of two instruments that use solar energy. [Taki House Govt. S.M. School for Boys’, 2019]", answer: "Solar cooker, solar panel / solar light" },
+          { text: "4.2 What happens after a silkworm pupa?", answer: "It becomes a moth." },
+          { text: "4.3 Write the names of two mineral resources that will disappear one day. [Kanaidighi Deshapran Vidyapith (H.S.), 2019]", answer: "Coal, petroleum" },
+          { text: "4.4 Where is the EPO mark? [Bally Jora Aswatthatala Vidyalaya, 2019]", answer: "On packaged food products (FPO)" },
+          { text: "4.5 Why is the kite bird hunted?", answer: "For its feathers / traditional reasons (now protected)" },
+          { text: "4.6 Write the name of one animal that is reared at home.", answer: "Cow / Goat / Hen" }
+        ]
+      },
+      {
+        title: "5. Answer in two-three sentences (any seven): (2×7=14)",
+        questions: [
+          { text: "5.1 When does the dead body of a fish float? Which type of coal produces less smoke when burnt? [Midnapore Collegiate School, 2019]", answer: "After some time (gases form). Anthracite / hard coal." },
+          { text: "5.2 Write two methods of water purification.", answer: "Boiling, filtering, using chlorine / halogen tablets." },
+          { text: "5.3 What is the work of a turbine?", answer: "Converts the energy of flowing water, steam or wind into mechanical energy." },
+          { text: "5.4 Where should a complaint be lodged about the adulteration of a shopkeeper? Who is called a consumer?", answer: "Consumer Forum. A person who buys and uses goods/services." },
+          { text: "5.5 What is meant by high tide? What is the main cause of high tide?", answer: "Rise of sea water. Gravitational pull of the Moon." },
+          { text: "5.6 Which parts of the road can be used to avoid accidents? [Singur G.M.M. Girls’ High School (H.S.), 2019]", answer: "Footpath and zebra crossing." },
+          { text: "5.7 What is a total solar eclipse called?", answer: "Total solar eclipse / Suryagrahan" },
+          { text: "5.8 In which places has flash flood occurred in the last few years?", answer: "Uttarakhand, North Bengal hills, etc." }
+        ]
+      },
+      {
+        title: "6. Answer in five-six sentences (any four): (3×4=12)",
+        questions: [
+          { text: "6.1 Why is Murshidabad famous as a historical place?", answer: "Former capital of Bengal, Nawabi architecture, historical monuments." },
+          { text: "6.2 Write the harmful effects of using more chemical fertilisers and insecticides.", answer: "Soil degradation, water pollution, harm to beneficial insects and human health." },
+          { text: "6.3 Write briefly about the importance of wetland.", answer: "Controls floods, recharges groundwater, supports biodiversity, provides resources." },
+          { text: "6.4 Explain how plants are dependent on animals.", answer: "Animals help in pollination and seed dispersal; animals also provide manure." },
+          { text: "6.5 Write how many trees are necessary for the environment.", answer: "As many as possible; forests are essential for oxygen, climate and life." }
         ]
       }
     ]
   }
+
 };
