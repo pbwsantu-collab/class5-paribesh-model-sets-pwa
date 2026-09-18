@@ -1,83 +1,970 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0d47a1">
-  <meta name="description" content="Class 5 Environmental Studies Model Sets 1-30 - Interactive PWA with clickable answers and exam mode">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Paribesh Sets">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.svg">
-  <title>Class 5 Paribesh Model Sets | Interactive PWA</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<meta name="description" content="30 Model Question Sets – Environmental Studies with clickable answers">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Model Sets EVS – Clickable Answers</title>
+<link rel="manifest" href="data:application/json,{'name':'Model Sets EVS','short_name':'EVS Sets','start_url':'.','display':'standalone','background_color':'#0f172a','theme_color':'#0f766e','icons':[{'src':'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%230f766e%22 width=%22100%22 height=%22100%22 rx=%2220%22/><text y=%22.9em%22 font-size=%2270%22 x=%2250%25%22 text-anchor=%22middle%22 fill=%22white%22>📚</text></svg>','sizes':'any','type':'image/svg+xml'}]}">
+<style>
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #14b8a6;
+  --accent-dim: #0f766e;
+  --correct: #22c55e;
+  --wrong: #ef4444;
+  --border: #334155;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,.35);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100dvh;
+  padding-bottom: 80px;
+}
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: linear-gradient(180deg, #0f766e 0%, #0d9488 100%);
+  padding: 12px 16px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: var(--shadow);
+}
+header h1 { font-size: 1.1rem; font-weight: 700; flex: 1; }
+header button {
+  background: rgba(255,255,255,.15); border: none; color: white;
+  width: 36px; height: 36px; border-radius: 50%; font-size: 1.1rem;
+  cursor: pointer; display: grid; place-items: center;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 16px; }
+.card {
+  background: var(--card); border-radius: var(--radius);
+  padding: 14px 16px; margin-bottom: 12px;
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.set-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.set-btn {
+  background: var(--card); border: 1px solid var(--border);
+  color: var(--text); padding: 16px 8px; border-radius: var(--radius);
+  font-weight: 600; font-size: .95rem; cursor: pointer;
+  transition: .15s; text-align: center;
+}
+.set-btn:hover, .set-btn:focus { border-color: var(--accent); background: #1e3a3a; }
+.set-btn small { display: block; font-weight: 400; color: var(--muted); font-size: .75rem; margin-top: 4px; }
+.section-title {
+  font-size: .85rem; font-weight: 700; color: var(--accent);
+  margin: 18px 0 8px; text-transform: uppercase; letter-spacing: .04em;
+}
+.q-card { margin-bottom: 14px; }
+.q-num { font-weight: 700; color: var(--accent); margin-right: 6px; }
+.q-text { margin-bottom: 10px; font-size: .95rem; }
+.options { display: flex; flex-direction: column; gap: 6px; }
+.opt {
+  background: #0f172a; border: 1px solid var(--border);
+  padding: 10px 12px; border-radius: 8px; cursor: pointer;
+  font-size: .9rem; transition: .12s; display: flex; align-items: center; gap: 8px;
+}
+.opt:hover { border-color: var(--accent); }
+.opt.selected { border-color: var(--accent); background: #134e4a; }
+.opt.correct { border-color: var(--correct); background: #14532d; }
+.opt.wrong { border-color: var(--wrong); background: #450a0a; }
+.opt .letter {
+  font-weight: 700; min-width: 22px; height: 22px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--border); font-size: .75rem;
+}
+.reveal-btn {
+  margin-top: 8px; background: transparent; border: 1px dashed var(--muted);
+  color: var(--muted); padding: 6px 12px; border-radius: 6px;
+  font-size: .8rem; cursor: pointer;
+}
+.reveal-btn:hover { border-color: var(--accent); color: var(--accent); }
+.answer-box {
+  margin-top: 8px; padding: 10px 12px; background: #134e4a;
+  border-left: 3px solid var(--correct); border-radius: 0 8px 8px 0;
+  font-size: .9rem; display: none;
+}
+.answer-box.show { display: block; }
+.feedback {
+  margin-top: 6px; font-size: .85rem; font-weight: 600;
+}
+.feedback.ok { color: var(--correct); }
+.feedback.bad { color: var(--wrong); }
+.score-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--card); border-top: 1px solid var(--border);
+  padding: 10px 16px; display: flex; justify-content: space-between;
+  align-items: center; font-size: .9rem; z-index: 40;
+}
+.progress { height: 4px; background: var(--border); border-radius: 2px; flex: 1; margin: 0 12px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width .3s; }
+.hidden { display: none !important; }
+.back-row { margin-bottom: 12px; }
+.back-row button {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text); padding: 6px 14px; border-radius: 20px;
+  font-size: .85rem; cursor: pointer;
+}
+.note { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc; --card: #ffffff; --text: #0f172a;
+    --muted: #64748b; --border: #e2e8f0;
+  }
+  .opt { background: #f1f5f9; }
+  .opt.selected { background: #ccfbf1; }
+  .opt.correct { background: #dcfce7; }
+  .opt.wrong { background: #fee2e2; }
+  .answer-box { background: #dcfce7; }
+}
+</style>
 </head>
 <body>
-  <header class="app-header">
-    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
-    <h1>Class 5 • Paribesh Model Sets</h1>
-    <button id="examModeBtn" class="exam-btn">Exam Mode: OFF</button>
-  </header>
+<header>
+  <button id="btnHome" title="Home">🏠</button>
+  <h1 id="pageTitle">Model Sets EVS</h1>
+  <button id="btnTheme" title="Toggle theme">🌓</button>
+</header>
 
-  <nav id="sidebar" class="sidebar">
-    <div class="sidebar-header">
-      <h2>Menu</h2>
-      <button id="closeMenu" class="close-btn">×</button>
+<main class="container">
+  <!-- HOME -->
+  <section id="viewHome">
+    <div class="card" style="text-align:center;margin-bottom:20px">
+      <h2 style="font-size:1.2rem;margin-bottom:6px">30 Model Question Sets</h2>
+      <p style="color:var(--muted);font-size:.9rem">Environmental Studies · Primary / Upper Primary<br>
+      Click any set → answer MCQs instantly · Reveal short answers</p>
     </div>
-    <ul id="setList" class="set-list">
-      <!-- Sets 1-30 will be injected here -->
-    </ul>
-    <div class="sidebar-footer">
-      <p>English Translation<br>Intact Format • Clickable Answers</p>
-    </div>
-  </nav>
+    <div class="set-grid" id="setGrid"></div>
+  </section>
 
-  <div id="overlay" class="overlay"></div>
+  <!-- SET VIEW -->
+  <section id="viewSet" class="hidden">
+    <div class="back-row"><button id="btnBackSets">← All Sets</button></div>
+    <div id="setContent"></div>
+  </section>
+</main>
 
-  <main id="mainContent" class="main-content">
-    <section id="welcome" class="welcome">
-      <h2>Welcome to Class 5 Environmental Studies</h2>
-      <p>Model Question Sets 1 – 30 (Full English Translation)</p>
-      <ul>
-        <li>✅ Intact original format</li>
-        <li>✅ Click any question / option to reveal answer</li>
-        <li>✅ Menu to jump between sets</li>
-        <li>✅ Exam Mode (hides answers + timer)</li>
-        <li>✅ Works offline on phone & computer</li>
-      </ul>
-      <button id="startBtn" class="primary-btn">Start with Model Set 1</button>
-    </section>
+<div class="score-bar hidden" id="scoreBar">
+  <span id="scoreText">0 / 0</span>
+  <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+  <span id="pctText">0%</span>
+</div>
 
-    <section id="setContainer" class="set-container hidden">
-      <div class="set-header">
-        <h2 id="setTitle">Model Set 1</h2>
-        <div class="timer" id="timer">01:30:00</div>
-      </div>
-      <div id="questionsArea" class="questions-area">
-        <!-- Questions injected by JS -->
-      </div>
-      <div class="nav-buttons">
-        <button id="prevSet" class="nav-btn">← Previous</button>
-        <button id="nextSet" class="nav-btn">Next →</button>
-      </div>
-    </section>
-  </main>
+<script>
+/* ============================================================
+   DATA – All 30 Sets (questions + answers)
+   For MCQ: options + correct index (0-based)
+   For others: answer text
+   ============================================================ */
+const SETS = [
+  // ---------- SET 1 ----------
+  {
+    id: 1, title: "MODEL SET-1",
+    sections: [
+      { type: "mcq", title: "1. Choose the correct answer (1×6=6)", qs: [
+        { q: "1.1 Nature and man together create—", opts: ["Coal","Intelligence","Property","Jungle"], ans: 2 },
+        { q: "1.2 What remains in the agricultural land when it becomes barren?", opts: ["Homestead","Path","Wetland","Forest land"], ans: 0 },
+        { q: "1.3 After how many hours does the secondary tide occur after the primary tide?", opts: ["6 hours","9 hours","12 hours 26 minutes","10 hours 26 minutes"], ans: 2 },
+        { q: "1.4 Which of the following is considered a mineral product?", opts: ["Wood","Fish","Coal","None of these"], ans: 2 },
+        { q: "1.5 The orbit of the Earth is—", opts: ["Circular","Flat","Elliptical","Level"], ans: 2 },
+        { q: "1.6 Paper was first made in—", opts: ["Nepal","China","India","Japan"], ans: 1 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks (1×6=6)", qs: [
+        { q: "2.1 Up to 14 years of age, _________ is our right.", a: "Education / Right to education" },
+        { q: "2.2 Train and tram run on _________ power.", a: "Electric" },
+        { q: "2.3 The kite is a _________ bird.", a: "Hunting / Predatory" },
+        { q: "2.4 The main crop of Darjeeling district is _________.", a: "Tea" },
+        { q: "2.5 _________ tree is smaller than the tea plant.", a: "Bot (or any suitable answer from textbook)" },
+        { q: "2.6 The generator runs on _________.", a: "Diesel / Mechanical energy" }
+      ]},
+      { type: "tf", title: "3. True / False (1×6=6)", qs: [
+        { q: "3.1 There is more dust and smoke in the village air.", a: "False (more in cities)" },
+        { q: "3.2 The orbit of the moon is circular and fixed.", a: "False (elliptical)" },
+        { q: "3.3 During a solar eclipse, the shadow of the Earth falls on the moon.", a: "False (Moon’s shadow falls on Earth)" },
+        { q: "3.4 Wood is made from carbon.", a: "False" },
+        { q: "3.5 ‘Pather Panchali’ is a writing of Rabindranath Tagore.", a: "False (Bibhutibhushan Bandyopadhyay)" },
+        { q: "3.6 We plant trees for carbon dioxide.", a: "False (we plant trees to absorb CO₂ / produce O₂)" }
+      ]},
+      { type: "short", title: "4–6. Short & Long answers", qs: [
+        { q: "4.1 Cause of acid rain?", a: "Oxides of sulphur & nitrogen from factories/vehicles dissolve in rain water forming acids." },
+        { q: "4.5 Why is Raniganj famous?", a: "Coal mining region of West Bengal." },
+        { q: "5.5 What is meant by climate?", a: "Average weather conditions of a place over a long period (usually 30+ years)." },
+        { q: "6.2 How is coal formed?", a: "From remains of ancient plants buried under soil, subjected to heat & pressure over millions of years." },
+        { q: "6.4 Social forestry?", a: "Planting trees on community land for fuel, fodder, timber & environmental benefit. Examples: roadside plantation, village woodlots." }
+      ]}
+    ]
+  },
+  // ---------- SET 2 ----------
+  {
+    id: 2, title: "MODEL SET-2",
+    sections: [
+      { type: "mcq", title: "1. Choose the correct answer", qs: [
+        { q: "1.1 Famous for terracotta work—", opts: ["Purulia","Bishnupur","Bardhaman","Nadia"], ans: 1 },
+        { q: "1.2 World Environment Day is observed on—", opts: ["15 June","1 October","15 October","5 June"], ans: 3 },
+        { q: "1.4 Coal is found in West Bengal in—", opts: ["Raniganj","Durgapur","Baharampur","Bardhaman"], ans: 0 },
+        { q: "1.5 A comet looks like—", opts: ["a broom","a stick","the moon","a bamboo"], ans: 0 },
+        { q: "1.6 The entrance to Buxa forest is—", opts: ["Cooch Behar","Malda","Alipurduar","Jalpaiguri"], ans: 2 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.2 The name of a hunting bird is _________.", a: "Kite / Eagle / Hawk" },
+        { q: "2.3 The name of the comet that fell on Jupiter is _________.", a: "Shoemaker-Levy 9" },
+        { q: "2.4 The meaning of the word ‘Mazar’ is _________.", a: "Grave / Tomb of a Pir" }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 Nycticebus is an endangered animal.", a: "True" },
+        { q: "3.2 One renewable energy is mineral oil.", a: "False" },
+        { q: "3.5 Aila occurred in the year 2007.", a: "False (2009)" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.6 Who invented the telescope?", a: "Galileo Galilei (refined it; Lippershey earlier)" },
+        { q: "5.3 What is a tsunami?", a: "A series of huge sea waves caused usually by under-sea earthquakes. Major one hit Indian Ocean in 2004." },
+        { q: "6.5 Boro paddy?", a: "Winter rice variety. Cultivated roughly Nov–Dec and harvested April–May." }
+      ]}
+    ]
+  },
+  // ---------- SET 3 ----------
+  {
+    id: 3, title: "MODEL SET-3",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.2 The hot liquid substance from a volcano is called—", opts: ["Lava","Granite","Plant","Acid"], ans: 0 },
+        { q: "1.3 The first rickshaw came to Kolkata in—", opts: ["1900","1901","1911","1902"], ans: 0 },
+        { q: "1.4 A natural disaster related to water is—", opts: ["Flood","Drought","Earthquake","None"], ans: 0 },
+        { q: "1.6 While buying a jelly, which mark should be seen?", opts: ["Agmark","Sink mark","FPO","ISI"], ans: 2 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.1 For rearing silkworms, _________ tree is cultivated.", a: "Mulberry" },
+        { q: "2.2 Cycle is a _________ free vehicle.", a: "Smoke / Pollution" },
+        { q: "2.6 High and low tide occurs _________ times a day.", a: "Two (approximately)" }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.5 During a lunar eclipse, the shadow of the Earth falls on the moon.", a: "True" },
+        { q: "3.6 Halogen tablet is used for water purification.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.6 Who is the source of all energy?", a: "The Sun" },
+        { q: "5.5 What is zebra crossing?", a: "Striped road marking where pedestrians should cross safely." },
+        { q: "6.4 Why is the Sun the source of all energy on Earth?", a: "All energy (food, wind, coal, etc.) ultimately originates from solar radiation." }
+      ]}
+    ]
+  },
+  // ---------- SET 4 ----------
+  {
+    id: 4, title: "MODEL SET-4",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.2 On which day does a lunar eclipse occur?", opts: ["New moon","Ekadashi","Full moon","Trayodashi"], ans: 2 },
+        { q: "1.3 The name of one poisonous gas is—", opts: ["Oxygen","Hydrogen","Carbon monoxide","All"], ans: 2 },
+        { q: "1.5 The satellite of the Earth is—", opts: ["Jupiter","Sun","Moon","Mars"], ans: 2 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.1 After the Sun, the nearest star to the Earth is _________.", a: "Proxima Centauri / Alpha Centauri" },
+        { q: "2.4 The telescope was invented by _________.", a: "Galileo (or Hans Lippershey)" }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 The source of all our energy is the Moon.", a: "False (Sun)" },
+        { q: "3.3 The name of one poisonous gas is carbon monoxide.", a: "True" },
+        { q: "3.6 The elephant is a vertebrate animal.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.2 In which year did Aila occur?", a: "2009" },
+        { q: "5.2 What is a solar cooker?", a: "A device that cooks food using concentrated sunlight (mirrors/reflectors)." }
+      ]}
+    ]
+  },
+  // ---------- SET 5 ----------
+  {
+    id: 5, title: "MODEL SET-5",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.2 The age for compulsory education of children is—", opts: ["20 years","10 years","14 years","18 years"], ans: 2 },
+        { q: "1.4 Tsunami is a word of which language?", opts: ["Japanese","Indian","Chinese","Greek"], ans: 0 },
+        { q: "1.5 Should child marriage be done?", opts: ["Yes","No","If done there is no harm","Not only once"], ans: 1 },
+        { q: "1.6 The time taken for light to come from the Sun to the Earth is—", opts: ["7 minutes","10 minutes","8 minutes","9 minutes"], ans: 2 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 The first train ran in India on 14 June 1853? (actually 16 April 1853)", a: "False (date is 16 April 1853)" },
+        { q: "3.6 Sulphur dioxide is a poisonous gas.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.1 Main mineral resource of West Bengal?", a: "Coal" },
+        { q: "4.2 Who directed the film ‘Pather Panchali’?", a: "Satyajit Ray" },
+        { q: "6.1 Why is the Sun very necessary for us?", a: "Provides light, heat, energy for photosynthesis, drives weather & climate, source of all energy." }
+      ]}
+    ]
+  },
+  // ---------- SET 6 ----------
+  {
+    id: 6, title: "MODEL SET-6",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.3 What happens after a silkworm pupa?", opts: ["Moth","Butterfly","Cockroach","Honeybee"], ans: 0 },
+        { q: "1.5 Which is against road safety?", opts: ["Using seat belt","Using zebra crossing","Crossing while talking on mobile","Wearing helmet"], ans: 2 },
+        { q: "1.6 A wild animal is—", opts: ["Tiger","Cat","Duck","Dog"], ans: 0 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 Mulberry tree is cultivated for rearing silkworms.", a: "True" },
+        { q: "3.4 Petroleum is called liquid gold.", a: "True" },
+        { q: "3.5 The Moon is 1 lakh kilometres away from the Earth.", a: "False (approx 3.84 lakh km)" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.6 From what is thermal electricity produced?", a: "Coal / other fossil fuels" },
+        { q: "5.6 Why is it necessary to plant trees?", a: "Produce oxygen, reduce CO₂, prevent soil erosion, provide shade, habitat, timber, etc." }
+      ]}
+    ]
+  },
+  // ---------- SET 7 ----------
+  {
+    id: 7, title: "MODEL SET-7",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.4 The Moon revolves around the Earth in—", opts: ["29 days","30 days","31 days","29½ days"], ans: 3 },
+        { q: "1.6 From green plants we get—", opts: ["Nitrogen","Hydrogen","Carbon monoxide","Oxygen"], ans: 3 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.5 _________ project has been built on the Damodar river.", a: "DVC (Damodar Valley Corporation)" },
+        { q: "2.1 The product of coal is _________.", a: "Coke / Coal tar / Gas (any)" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.5 What is called ‘black diamond’?", a: "Coal" },
+        { q: "5.4 Why does acid rain occur?", a: "SO₂ and NOₓ from industries & vehicles dissolve in rain forming acids." }
+      ]}
+    ]
+  },
+  // ---------- SET 8 ----------
+  {
+    id: 8, title: "MODEL SET-8",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.4 In which year was Rabindranath Tagore born?", opts: ["1838","1820","1902","1861"], ans: 3 },
+        { q: "1.6 ‘Anandamath’ was written by—", opts: ["Swami Vivekananda","Dayananda Saraswati","Bankim Chandra Chattopadhyay","Surya Sen"], ans: 2 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.4 The English word ‘Paper’ has come from papyrus.", a: "True" },
+        { q: "3.5 DOTS treatment is given to tuberculosis patients.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "5.5 How is coal formed?", a: "From buried plant remains under heat & pressure over geological time." },
+        { q: "6.2 Ishwar Chandra Vidyasagar – birth & women’s welfare?", a: "Born 1820. Fought for widow remarriage, women’s education, against child marriage." }
+      ]}
+    ]
+  },
+  // ---------- SET 9 ----------
+  {
+    id: 9, title: "MODEL SET-9",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.2 Alipur is the headquarters of which district?", opts: ["Howrah","Hooghly","South 24 Parganas","North 24 Parganas"], ans: 2 },
+        { q: "1.4 Animal that looks like a big black cow in Jalpaiguri forests—", opts: ["Tiger","Rhinoceros","Gaur","Lion"], ans: 2 },
+        { q: "1.5 Most of the coal is—", opts: ["Iron","Carbon","Methane","Sulphur"], ans: 1 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.2 Cooking is done with biogas.", a: "True" },
+        { q: "3.6 Cycle is a smoke-free vehicle.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.1 Which gas do the leaves of trees give us?", a: "Oxygen" },
+        { q: "6.2 Full form of DVC?", a: "Damodar Valley Corporation – multi-purpose river valley project for power, irrigation & flood control." }
+      ]}
+    ]
+  },
+  // ---------- SET 10 ----------
+  {
+    id: 10, title: "MODEL SET-10",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.1 Turbine is rotated to produce—", opts: ["Heat energy","Electrical energy","Potential energy","Chemical energy"], ans: 1 },
+        { q: "1.2 In ancient times, books were written on—", opts: ["Coconut leaf","Mango leaf","Bamboo leaf","Palm leaf"], ans: 3 },
+        { q: "1.4 The telescope was invented by—", opts: ["Newton","Copernicus","Aristotle","Galileo"], ans: 3 },
+        { q: "1.6 An animal that has disappeared from present India is—", opts: ["Cheetah","Cow","Dog","Elephant"], ans: 0 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 World Environment Day is observed on 5 June.", a: "True" },
+        { q: "3.3 Accidents decrease as a result of wearing seat belts.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.4 First Education Minister of independent India?", a: "Maulana Abul Kalam Azad" },
+        { q: "6.5 Cause of acid rain?", a: "Emission of SO₂ and nitrogen oxides that form acids in the atmosphere." }
+      ]}
+    ]
+  },
+  // ---------- SET 11 ----------
+  {
+    id: 11, title: "MODEL SET-11",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.3 The path on which the Earth revolves around the Sun is called—", opts: ["Solar path","Orbit","Earth path","Shadow path"], ans: 1 },
+        { q: "1.5 Silkworm is reared on which tree?", opts: ["Paddy","Mulberry","Jute","Tea"], ans: 1 },
+        { q: "1.6 Where is the Ajodhya hill?", opts: ["Bankura","Medinipur","Purulia","Bardhaman"], ans: 2 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.2 Typhoid is a water-borne disease.", a: "True" },
+        { q: "3.4 The director of the film ‘Pather Panchali’ was Satyajit Ray.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.1 When did the first passenger train run in India?", a: "16 April 1853 (Bombay to Thane)" },
+        { q: "5.8 How can fear of destruction of mineral resources be reduced?", a: "Use renewable energy, recycle, reduce waste, research alternatives." }
+      ]}
+    ]
+  },
+  // ---------- SET 12 ----------
+  {
+    id: 12, title: "MODEL SET-12",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.1 Kulik bird sanctuary is seen in—", opts: ["Jalpaiguri","Raiganj","Buxa","Sundarban"], ans: 1 },
+        { q: "1.3 In 2004, damage was caused by tsunami in—", opts: ["Kerala","West Bengal","Tamil Nadu","Karnataka"], ans: 2 },
+        { q: "1.4 What can happen as a result of air pollution?", opts: ["Asthma","Tuberculosis","Cholera","Typhoid"], ans: 0 },
+        { q: "1.6 An animal that has become extinct at present is—", opts: ["Dinosaur","Kakatuwa","Dog","Rhinoceros"], ans: 0 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.1 The Moon is approximately _________ km away from the Earth.", a: "3,84,000 km (approx)" },
+        { q: "2.3 The store of _________ energy will be finished one day.", a: "Conventional / Non-renewable / Fossil fuel" }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 Paper was first made in Japan.", a: "False (China)" },
+        { q: "3.4 Marriage of a girl below 14 years of age is considered legal.", a: "False" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "5.5 Why is coal called ‘black diamond’?", a: "Because of its high economic value and importance as a fuel & industrial resource." },
+        { q: "6.1 Why is smoke of coal poisonous?", a: "Contains carbon monoxide, sulphur dioxide and other harmful gases." }
+      ]}
+    ]
+  },
+  // ---------- SET 13 ----------
+  {
+    id: 13, title: "MODEL SET-13",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.3 The previous name of Purulia was—", opts: ["Birbhum","Barabhum","Manbhum","Singhbhum"], ans: 2 },
+        { q: "1.5 Buxa is a—", opts: ["Mountain","Fort","Sea","Forest"], ans: 3 },
+        { q: "1.6 Children’s Day is observed on—", opts: ["14 November","10 October","9 July","11 June"], ans: 0 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.4 1 October is observed as World _________ Day.", a: "Habitat / Senior Citizens (commonly Habitat Day)" },
+        { q: "2.5 The time taken for light to come from the Sun to the Earth is _________ minutes.", a: "About 8" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.6 On which day does a lunar eclipse occur?", a: "Full moon day" },
+        { q: "5.1 How will you prepare ORS at home?", a: "1 litre clean water + 6 teaspoons sugar + ½ teaspoon salt (or use ORS packet)." }
+      ]}
+    ]
+  },
+  // ---------- SET 14 ----------
+  {
+    id: 14, title: "MODEL SET-14",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.1 In 1994, a comet fell on which planet?", opts: ["Jupiter","Saturn","Venus","Mars"], ans: 0 },
+        { q: "1.2 If the husband dies, the wife is also burnt… What is this called?", opts: ["Sati system","Child marriage","Polygamy","Holika burning"], ans: 0 },
+        { q: "1.3 Netaji is called—", opts: ["Mahatma Gandhi","Deshbandhu","Rabindranath","Subhas Chandra Bose"], ans: 3 },
+        { q: "1.4 Who wrote ‘Sultana’s Dream’?", opts: ["Begum Rokeya","Nurjahan","Mumtaz","Yodhabai"], ans: 0 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.2 Satyajit Ray is a film director.", a: "True" },
+        { q: "3.4 The rickshaw came to Kolkata in 1860.", a: "False (around 1900–1914)" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.2 Which prehistoric animal has become extinct?", a: "Dinosaur" },
+        { q: "6.1 Why is wildlife conservation done?", a: "To maintain ecological balance, protect biodiversity and prevent extinction of species." }
+      ]}
+    ]
+  },
+  // ---------- SET 15 ----------
+  {
+    id: 15, title: "MODEL SET-15",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.2 A natural disaster is—", opts: ["Afforestation","Tsunami","Deforestation","Earthquake"], ans: 1 },
+        { q: "1.5 The source of all energy is—", opts: ["Moon","Sun","Earth","Mars"], ans: 1 },
+        { q: "1.6 In 2009, a big storm occurred whose name was—", opts: ["Aila","Fani","Hudhud","Gati"], ans: 0 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 A lunar eclipse occurs on the new moon day.", a: "False (full moon)" },
+        { q: "3.2 Galileo invented the telescope.", a: "True (improved it)" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.1 Instrument for cooking using the sun?", a: "Solar cooker" },
+        { q: "5.4 Why can a cycle be called environment-friendly?", a: "No fuel, zero emission, no noise pollution." }
+      ]}
+    ]
+  },
+  // ---------- SET 16 ----------
+  {
+    id: 16, title: "MODEL SET-16",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.1 Children’s Day is observed on whose birthday?", opts: ["Radhakrishnan","Jawaharlal Nehru","Ambedkar","Mahatma Gandhi"], ans: 1 },
+        { q: "1.2 Oxides in smoke when dissolved in water form—", opts: ["Acid","Alkali","Salt","Chlorine"], ans: 0 },
+        { q: "1.6 The main crop of Darjeeling district is—", opts: ["Coffee","Tea","Potato","Wheat"], ans: 1 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.4 Kulik is a bird sanctuary.", a: "True" },
+        { q: "3.1 One cash crop is paddy.", a: "False (paddy is mainly food crop)" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.2 What happens after a silkworm pupa?", a: "It becomes a moth." },
+        { q: "5.5 What is meant by high tide? Main cause?", a: "Rise of sea level due to gravitational pull of the Moon (and Sun)." }
+      ]}
+    ]
+  },
+  // ---------- SET 17 ----------
+  {
+    id: 17, title: "MODEL SET-17",
+    sections: [
+      { type: "short", title: "1. Complete sentences", qs: [
+        { q: "1.1 Second nearest star to the Earth?", a: "Proxima Centauri (or Alpha Centauri system)" },
+        { q: "1.2 Which gas comes out from the smoke of coal?", a: "Carbon monoxide / Sulphur dioxide / CO₂" },
+        { q: "1.3 On which river has the D.V.C. been built?", a: "Damodar" }
+      ]},
+      { type: "short", title: "2. Memorable years", qs: [
+        { q: "1905, 1941, 1947, 1950, 1990 – Why memorable?", a: "1905: Partition of Bengal; 1941: Death of Tagore / Netaji’s escape; 1947: Independence; 1950: Republic Day / Constitution; 1990: Economic liberalisation (or other context-specific)" }
+      ]},
+      { type: "mcq", title: "4. Correct answer", qs: [
+        { q: "4.3 The main mineral resource of West Bengal is—", opts: ["Bauxite","Coal","Petroleum"], ans: 1 },
+        { q: "4.5 Children’s Day is observed on whose birthday?", opts: ["Jawaharlal Nehru","Abul Kalam Azad","Subhas Chandra Bose"], ans: 0 }
+      ]},
+      { type: "short", title: "6. Long answers", qs: [
+        { q: "6.1 What is biogas? Why pollution decreases with train & tram?", a: "Biogas = methane-rich gas from organic waste. Trains & trams run on electricity → no direct exhaust pollution." },
+        { q: "6.4 Conventional vs Non-conventional energy", a: "Conventional: coal, petroleum, natural gas (finite). Non-conventional: solar, wind, biogas, hydro (renewable)." }
+      ]}
+    ]
+  },
+  // ---------- SET 18 ----------
+  {
+    id: 18, title: "MODEL SET-18",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.1 While buying jelly, which mark should be seen?", opts: ["Agmark","Sink mark","FPO","ISI mark"], ans: 2 },
+        { q: "1.2 The Moon completes one revolution in—", opts: ["27½ days","28½ days","29½ days","24½ days"], ans: 2 },
+        { q: "1.4 BCG is used as a vaccine for—", opts: ["Cholera","Tuberculosis","Typhoid","Rheumatism"], ans: 1 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.1 1 October is World Environment Day.", a: "False (5 June)" },
+        { q: "3.3 Halogen tablet is used for water purification.", a: "True" },
+        { q: "3.4 DOTS treatment is given to tuberculosis patients.", a: "True" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "5.1 Nearest star after the Sun?", a: "Proxima Centauri" },
+        { q: "7.2 Rights of children?", a: "Right to education, health, protection from exploitation, play, identity, etc." }
+      ]}
+    ]
+  },
+  // ---------- SET 19 ----------
+  {
+    id: 19, title: "MODEL SET-19",
+    sections: [
+      { type: "mcq", title: "1. MCQ", qs: [
+        { q: "1.1 Environment-friendly means of transport—", opts: ["Rickshaw","Lorry","Taxi"], ans: 0 },
+        { q: "1.2 Soft-stemmed tree—", opts: ["Mango","Banana","Jackfruit"], ans: 1 },
+        { q: "1.3 Main mineral resource of West Bengal—", opts: ["Iron","Coal","Petroleum"], ans: 1 },
+        { q: "1.6 During solar eclipse the middle one is—", opts: ["Earth","Moon","Sun"], ans: 1 }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.1 Paper was first made in _________ country.", a: "China" },
+        { q: "2.2 In 2009 a very big storm occurred, its name was _________.", a: "Aila" },
+        { q: "2.3 The source of all energy is _________.", a: "Sun" }
+      ]},
+      { type: "short", title: "Short answers", qs: [
+        { q: "4.1 High tide and low tide?", a: "Periodic rise and fall of sea level caused mainly by Moon’s gravity." },
+        { q: "4.6 Difference between solar & lunar eclipse?", a: "Solar: Moon between Sun & Earth. Lunar: Earth between Sun & Moon." }
+      ]}
+    ]
+  },
+  // ---------- SET 20/21 ----------
+  {
+    id: 20, title: "MODEL SET-20 / 21",
+    sections: [
+      { type: "fill", title: "1. Fill in the blanks", qs: [
+        { q: "1.1 Main mineral resource of West Bengal is _________.", a: "Coal" },
+        { q: "1.4 The rickshaw came to Kolkata in the year _________.", a: "Around 1900–1914 (commonly 1914 in many texts)" },
+        { q: "1.5 Rise of water on new/full moon is called _________.", a: "High tide / Spring tide" },
+        { q: "1.6 DVC was built taking the _________ river as centre.", a: "Damodar" },
+        { q: "1.10 Famous for terracotta is _________ district.", a: "Bankura (Bishnupur)" }
+      ]},
+      { type: "mcq", title: "2. Tick the correct answer", qs: [
+        { q: "2.2 One poisonous gas is—", opts: ["Oxygen","Carbon monoxide","Methane"], ans: 1 },
+        { q: "2.3 Solar electricity is produced from—", opts: ["Conventional","Non-conventional","Kinetic"], ans: 1 },
+        { q: "2.5 First passenger train in India—", opts: ["1853","1854","1990"], ans: 0 },
+        { q: "2.6 In solar eclipse middle position is—", opts: ["Sun","Earth","Moon"], ans: 2 }
+      ]},
+      { type: "short", title: "3. One or two words", qs: [
+        { q: "3.2 Why is Raniganj famous?", a: "Coal mines" },
+        { q: "3.7 Who directed ‘Pather Panchali’?", a: "Satyajit Ray" },
+        { q: "3.9 Main cause of high tide?", a: "Gravitational attraction of the Moon" }
+      ]}
+    ]
+  },
+  // ---------- SET 22 ----------
+  {
+    id: 22, title: "MODEL SET-22",
+    sections: [
+      { type: "short", title: "1. Answer any ten", qs: [
+        { q: "1.1 Full form of DVC?", a: "Damodar Valley Corporation" },
+        { q: "1.2 Who invented the telescope?", a: "Galileo / Hans Lippershey" },
+        { q: "1.3 Time for Moon to revolve once?", a: "Approx 27.3 days (sidereal) / 29.5 days (synodic)" },
+        { q: "1.4 Source of all energy of living world?", a: "Sun" },
+        { q: "1.5 Who wrote ‘Pather Panchali’?", a: "Bibhutibhushan Bandyopadhyay" },
+        { q: "1.8 Time for light from Sun to Earth?", a: "About 8 minutes" }
+      ]},
+      { type: "tf", title: "5. True or False", qs: [
+        { q: "5.2 The banana tree is a soft-stemmed tree.", a: "True" },
+        { q: "5.4 Mulberry tree is cultivated for silkworms.", a: "True" },
+        { q: "5.5 Carbon monoxide is a poisonous gas.", a: "True" }
+      ]},
+      { type: "mcq", title: "6. Correct answer", qs: [
+        { q: "6.1 The tram runs on—", opts: ["Coal","Battery","Electricity"], ans: 2 },
+        { q: "6.3 One non-conventional energy is—", opts: ["Thermal","Hydro","Solar electricity"], ans: 2 },
+        { q: "6.4 2009 storm in Sundarban—", opts: ["Pilin","Aila","Cyclone"], ans: 1 }
+      ]}
+    ]
+  },
+  // ---------- SET 23 ----------
+  {
+    id: 23, title: "MODEL SET-23",
+    sections: [
+      { type: "mcq", title: "1. Choose correct", qs: [
+        { q: "1.1 Animal like big black cow in Jalpaiguri forests—", opts: ["Rhinoceros","Gaur","Tiger"], ans: 1 },
+        { q: "1.2 Man first domesticated—", opts: ["Dog","Horse","Cat"], ans: 0 },
+        { q: "1.9 Paper was first made in—", opts: ["Japan","India","China"], ans: 2 },
+        { q: "1.11 Sudden flood due to heavy rain in hills is—", opts: ["Flash flood","Tsunami","Tornado"], ans: 0 }
+      ]},
+      { type: "short", title: "2. Very brief", qs: [
+        { q: "2.1 Instrument for cooking using sun?", a: "Solar cooker" },
+        { q: "2.5 First Education Minister of independent India?", a: "Abul Kalam Azad" },
+        { q: "2.7 Who directed ‘Pather Panchali’?", a: "Satyajit Ray" },
+        { q: "2.8 Year of Aila?", a: "2009" }
+      ]},
+      { type: "tf", title: "4. True / False", qs: [
+        { q: "4.2 A lunar eclipse occurs on the night of the full moon.", a: "True" },
+        { q: "4.4 Iron is the main mineral resource of West Bengal.", a: "False (Coal)" }
+      ]}
+    ]
+  },
+  // ---------- SET 24 ----------
+  {
+    id: 24, title: "MODEL SET-24",
+    sections: [
+      { type: "short", title: "1. Complete sentences", qs: [
+        { q: "1.1 Source of all energy of living world?", a: "Sun" },
+        { q: "1.7 Who first invented / improved the telescope?", a: "Galileo" },
+        { q: "1.9 Nearest star after the Sun?", a: "Proxima Centauri" },
+        { q: "1.10 Terrible storm of 2009 in West Bengal?", a: "Aila" },
+        { q: "1.11 Main crop of Darjeeling?", a: "Tea" }
+      ]},
+      { type: "mcq", title: "2. Choose correct", qs: [
+        { q: "2.1 First train in this country—", opts: ["1853","1854","1855"], ans: 0 },
+        { q: "2.3 The tram runs on—", opts: ["Coal","Battery","Electricity"], ans: 2 },
+        { q: "2.4 Silkworm is reared on—", opts: ["Paddy","Mulberry","Jute"], ans: 1 },
+        { q: "2.8 Paper first made in—", opts: ["England","India","China"], ans: 2 }
+      ]},
+      { type: "short", title: "5–6 Brief answers", qs: [
+        { q: "5.5 Full form of DVC & purpose?", a: "Damodar Valley Corporation – power generation, irrigation, flood control." },
+        { q: "6.1 Rights of children?", a: "Education, health, protection, play, freedom from exploitation, etc." }
+      ]}
+    ]
+  },
+  // ---------- SET 25 ----------
+  {
+    id: 25, title: "MODEL SET-25",
+    sections: [
+      { type: "mcq", title: "1. Choose correct", qs: [
+        { q: "1.1 Small forests in locality are called—", opts: ["Agricultural forest","Social forest","Social forestry"], ans: 2 },
+        { q: "1.3 One non-conventional energy is—", opts: ["Hydro-electricity","Solar energy","Thermal electricity"], ans: 1 },
+        { q: "1.4 First passenger train ran in—", opts: ["1852","1853","1854"], ans: 1 },
+        { q: "1.5 Galileo invented the—", opts: ["Microscope","Telescope","Stethoscope"], ans: 1 }
+      ]},
+      { type: "tf", title: "3. True / False", qs: [
+        { q: "3.3 Sulphur dioxide is a poisonous gas.", a: "True" },
+        { q: "3.4 Compulsory education mandatory up to 18 years?", a: "False (up to 14 years under RTE; higher in some policies)" },
+        { q: "3.6 Diu and Lichu joined to form Mahanadi?", a: "False" }
+      ]},
+      { type: "short", title: "5–8 Answers", qs: [
+        { q: "5.2 What is a comet?", a: "A celestial body of ice, dust & rock that develops a tail when near the Sun." },
+        { q: "5.5 What is a steam engine?", a: "An engine that converts heat from steam into mechanical work." },
+        { q: "6.2 What is an earthquake?", a: "Sudden shaking of the ground caused by movement of tectonic plates." },
+        { q: "6.3 Social forestry?", a: "Community planting of trees for environmental & economic benefits." },
+        { q: "7.2 What is biogas?", a: "Gas (mainly methane) produced by anaerobic digestion of organic waste." },
+        { q: "8. Main & secondary high tide diagram explanation", a: "Main (spring) tides occur on new/full moon (Sun+Moon aligned). Secondary (neap) tides when Sun & Moon at right angles. Interval ≈ 12 h 26 min between successive high tides." }
+      ]}
+    ]
+  },
+  // ---------- SET 26 ----------
+  {
+    id: 26, title: "MODEL SET-26",
+    sections: [
+      { type: "fill", title: "1. Fill in the blanks", qs: [
+        { q: "1.1 _________ is World Environment Day.", a: "5 June" },
+        { q: "1.2 Nearest star after the Sun is _________.", a: "Proxima Centauri" },
+        { q: "1.3 Up to _________ years of age, reading & writing is your right.", a: "14" },
+        { q: "1.7 Bicycle riders should wear _________ marked helmet.", a: "ISI / BIS" }
+      ]},
+      { type: "mcq", title: "2. Choose correct", qs: [
+        { q: "2.1 Main mineral resource of West Bengal—", opts: ["Petroleum","Coal","Iron ore"], ans: 1 },
+        { q: "2.5 Water of high tide increases a lot on—", opts: ["Day before new moon","Day before full moon","New moon-full moon day"], ans: 2 }
+      ]},
+      { type: "short", title: "3–5 Answers", qs: [
+        { q: "3.1 Dead body of a fish is called?", a: "Carcass / floating dead body (when it surfaces)" },
+        { q: "3.2 Author of ‘Pather Panchali’?", a: "Bibhutibhushan Bandyopadhyay" },
+        { q: "4.2 Why does acid rain occur?", a: "SO₂ & NOₓ from pollution dissolve in rain forming acids." },
+        { q: "5.1 Why is the Sun the source of all energy?", a: "All forms of energy on Earth ultimately derive from solar radiation." },
+        { q: "5.4 Total lunar eclipse – description", a: "Earth comes between Sun and Moon; Earth’s shadow covers the whole Moon." }
+      ]}
+    ]
+  },
+  // ---------- SET 27 ----------
+  {
+    id: 27, title: "MODEL SET-27",
+    sections: [
+      { type: "short", title: "1. Complete sentences", qs: [
+        { q: "1.1 Year of Aila?", a: "2009" },
+        { q: "1.2 After secondary high tide, main high tide occurs after?", a: "Approx 12 hours 26 minutes" },
+        { q: "1.8 Director of ‘Pather Panchali’?", a: "Satyajit Ray" },
+        { q: "1.10 Nearest star after Sun?", a: "Proxima Centauri" },
+        { q: "1.12 What is ‘Gaur’?", a: "Indian bison – a large wild ox found in forests of North Bengal / Jalpaiguri." }
+      ]},
+      { type: "fill", title: "2. Fill in the blanks", qs: [
+        { q: "2.2 First rickshaw service in Kolkata in _________.", a: "Around 1900–1914" },
+        { q: "2.5 Up to _________ years, education is fundamental right.", a: "14" },
+        { q: "2.6 Paper first made in _________ country.", a: "China" }
+      ]},
+      { type: "short", title: "4–6 Answers", qs: [
+        { q: "4.3 Two symptoms of anaemia?", a: "Pale skin, weakness, fatigue, shortness of breath." },
+        { q: "6.1 Five rights of children?", a: "Right to education, health, protection, play, identity / nationality, freedom from exploitation." },
+        { q: "6.3 Explain – Sun is source of all energy", a: "Photosynthesis, fossil fuels, wind, hydro, solar panels – all ultimately powered by the Sun." }
+      ]}
+    ]
+  },
+  // ---------- SET 28 ----------
+  {
+    id: 28, title: "MODEL SET-28",
+    sections: [
+      { type: "short", title: "1. One sentence", qs: [
+        { q: "1.1 Who invented the telescope?", a: "Galileo / Lippershey" },
+        { q: "1.2 When is World Environment Day?", a: "5 June" },
+        { q: "1.4 Nearest star after the Sun?", a: "Proxima Centauri" },
+        { q: "1.7 Main mineral resource of West Bengal?", a: "Coal" },
+        { q: "1.8 Who wrote ‘Pather Panchali’?", a: "Bibhutibhushan Bandyopadhyay" }
+      ]},
+      { type: "mcq", title: "2. Choose correct", qs: [
+        { q: "2.1 A comet looks like—", opts: ["a broom","a stick","a mountain"], ans: 0 },
+        { q: "2.2 During lunar eclipse middle position—", opts: ["Sun","Earth","Moon"], ans: 1 },
+        { q: "2.3 Light from Sun takes approx—", opts: ["8 minutes","12 minutes","10 minutes"], ans: 0 },
+        { q: "2.5 Pressure cooker mark—", opts: ["Agmark","FPO","ISI"], ans: 2 }
+      ]},
+      { type: "fill", title: "3. Fill in the blanks", qs: [
+        { q: "3.1 Aila occurred in _________.", a: "2009" },
+        { q: "3.2 English name of paper from _________.", a: "Papyrus" },
+        { q: "3.6 _________ is the source of all our energy.", a: "Sun" }
+      ]},
+      { type: "short", title: "4–5 Answers", qs: [
+        { q: "4.2 What is flash flood?", a: "Sudden local flood caused by intense rainfall, especially in hilly areas." },
+        { q: "4.3 Tsunami? Year?", a: "Huge sea waves from under-sea quake. Major one: 26 Dec 2004." },
+        { q: "5.1 Rights of children?", a: "Education, health, protection, play, freedom from child labour & marriage, etc." }
+      ]}
+    ]
+  },
+  // ---------- SET 29 ----------
+  {
+    id: 29, title: "MODEL SET-29",
+    sections: [
+      { type: "fill", title: "1. Fill in the blanks", qs: [
+        { q: "1.1 _________ is called the ‘entrance of Buxa forest’.", a: "Alipurduar (or Rajabhatkhawa)" },
+        { q: "1.2 _________ organised the Azad Hind Fauj.", a: "Netaji Subhas Chandra Bose / Rashbehari Bose (founding)" },
+        { q: "1.4 26 January 1950 is the _________ Day of India.", a: "Republic" },
+        { q: "1.6 _________ is the main mineral resource of West Bengal.", a: "Coal" },
+        { q: "1.7 Solar electricity is _________ energy.", a: "Non-conventional / Renewable" },
+        { q: "1.8 First passenger train ran in _________.", a: "1853" }
+      ]},
+      { type: "short", title: "2. Answer the questions", qs: [
+        { q: "2.1 Who wrote & directed ‘Pather Panchali’?", a: "Written by Bibhutibhushan Bandyopadhyay; directed by Satyajit Ray." },
+        { q: "2.2 Two main causes of high & low tide?", a: "Gravitational pull of the Moon and the Sun." },
+        { q: "2.3 Interval between secondary & main high tide?", a: "Approx 12 hours 26 minutes" },
+        { q: "2.8 What is flash flood?", a: "Sudden flood due to intense short-duration rainfall, common in hills." }
+      ]},
+      { type: "mcq", title: "3. Tick correct", qs: [
+        { q: "3.1 Most of the coal is—", opts: ["Methane","Carbon","Iron"], ans: 1 },
+        { q: "3.2 Instrument for cooking using sun—", opts: ["Solar cooker","Road spectacles","Rice cooker"], ans: 0 },
+        { q: "3.5 A tsunami is a kind of—", opts: ["Storm","Flood","Sea wave"], ans: 2 },
+        { q: "3.6 First Education Minister—", opts: ["P.C. Ray","Abul Kalam Azad","Meghnad Saha"], ans: 1 },
+        { q: "3.8 Acharya J.C. Bose was a—", opts: ["Litterateur","Freedom fighter","Scientist"], ans: 2 }
+      ]},
+      { type: "short", title: "5–6 Answers", qs: [
+        { q: "5.1 Three works against road safety?", a: "Talking on mobile while crossing, not using zebra crossing, not wearing helmet/seat-belt." },
+        { q: "5.2 What do you know about comets?", a: "Icy bodies that orbit the Sun; when near Sun they develop a glowing coma and tail." }
+      ]}
+    ]
+  },
+  // ---------- SET 30 ----------
+  {
+    id: 30, title: "MODEL SET-30",
+    sections: [
+      { type: "mcq", title: "1. Choose correct", qs: [
+        { q: "1.1 In 2009 occurred—", opts: ["Earthquake","Aila storm","Sea wave"], ans: 1 },
+        { q: "1.2 Telescope invented by—", opts: ["Galileo","Vidyasagar","De Rozio"], ans: 0 },
+        { q: "1.3 Moon’s full revolution takes—", opts: ["27½ days","28½ days","29½ days"], ans: 2 },
+        { q: "1.4 Main cause of high tide—", opts: ["Rotation of Earth","Attraction of Sun","Attraction of Moon"], ans: 2 },
+        { q: "1.5 Light from Sun takes—", opts: ["8 minutes","10 minutes","9 minutes"], ans: 0 },
+        { q: "1.6 1994 comet fell on—", opts: ["Jupiter","Venus","Saturn"], ans: 0 },
+        { q: "1.7 World Environment Day—", opts: ["1 October","2 October","5 June"], ans: 2 },
+        { q: "1.8 Lunar eclipse occurs on—", opts: ["New moon","Full moon","Ekadashi"], ans: 1 },
+        { q: "1.10 Solar panel is source of _________ energy", opts: ["Conventional","Non-conventional","Potential"], ans: 1 }
+      ]},
+      { type: "short", title: "3. One word", qs: [
+        { q: "3.1 Name of one big forest?", a: "Sundarban / Buxa" },
+        { q: "3.2 Kind of mine in Raniganj?", a: "Coal mine" },
+        { q: "3.5 What is a ferry?", a: "A boat or ship that carries people/vehicles across a river or short water body." }
+      ]},
+      { type: "fill", title: "4. Fill in the blanks", qs: [
+        { q: "4.1 Main food of animals, birds & plants is _________.", a: "Sunlight / energy from Sun (or food chain answer)" },
+        { q: "4.3 Cycle is a _________ free vehicle.", a: "Smoke / Pollution" },
+        { q: "4.4 ‘Pather Panchali’ was written by _________.", a: "Bibhutibhushan Bandyopadhyay" },
+        { q: "4.5 Small forests in locality are called _________.", a: "Social forestry / Community forests" }
+      ]},
+      { type: "short", title: "5–7 Notes & diagrams", qs: [
+        { q: "5.1 Biogas", a: "Methane-rich gas from anaerobic digestion of organic waste; used for cooking & lighting." },
+        { q: "5.3 Lunar eclipse", a: "Earth comes between Sun & Moon; Earth’s shadow falls on Moon (only on full moon)." },
+        { q: "5.5 Flash flood", a: "Sudden local flooding from intense rainfall, especially in mountainous regions." },
+        { q: "6.5 Two fundamental rights of children?", a: "Right to education and right to protection from exploitation / child labour." },
+        { q: "7.1 Total solar eclipse diagram", a: "Sun – Moon – Earth aligned; Moon completely covers the Sun’s disk for observers in the umbra." }
+      ]}
+    ]
+  }
+];
 
-  <footer class="app-footer">
-    <p>Interactive PWA • Data from Tulsir Prashnasangi Right Track • Class 5</p>
-  </footer>
+/* ============================================================
+   APP LOGIC
+   ============================================================ */
+let currentSet = null;
+let answered = 0, correct = 0;
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => console.log('Service Worker ready for offline use'))
-        .catch(console.error);
-    }
-  </script>
+const $ = id => document.getElementById(id);
+const viewHome = $('viewHome');
+const viewSet = $('viewSet');
+const setGrid = $('setGrid');
+const setContent = $('setContent');
+const pageTitle = $('pageTitle');
+const scoreBar = $('scoreBar');
+
+function showHome() {
+  viewHome.classList.remove('hidden');
+  viewSet.classList.add('hidden');
+  scoreBar.classList.add('hidden');
+  pageTitle.textContent = 'Model Sets EVS';
+  currentSet = null;
+}
+
+function showSet(id) {
+  const set = SETS.find(s => s.id === id);
+  if (!set) return;
+  currentSet = set;
+  answered = 0; correct = 0;
+  updateScore();
+  viewHome.classList.add('hidden');
+  viewSet.classList.remove('hidden');
+  scoreBar.classList.remove('hidden');
+  pageTitle.textContent = set.title;
+  renderSet(set);
+  window.scrollTo(0, 0);
+}
+
+function updateScore() {
+  $('scoreText').textContent = `${correct} / ${answered}`;
+  const pct = answered ? Math.round(correct / answered * 100) : 0;
+  $('pctText').textContent = pct + '%';
+  $('progressFill').style.width = pct + '%';
+}
+
+function renderSet(set) {
+  let html = `<div class="card"><strong>${set.title}</strong><br><span class="note">Time: 1 hr 30 min · Full Marks: 50</span></div>`;
+  set.sections.forEach((sec, si) => {
+    html += `<div class="section-title">${sec.title}</div>`;
+    sec.qs.forEach((item, qi) => {
+      const key = `${set.id}-${si}-${qi}`;
+      if (sec.type === 'mcq') {
+        html += `<div class="card q-card" data-key="${key}">
+          <div class="q-text"><span class="q-num">${item.q.split(' ')[0]}</span>${item.q.replace(/^\d+\.\d+\s*/, '')}</div>
+          <div class="options">`;
+        item.opts.forEach((o, oi) => {
+          html += `<div class="opt" data-oi="${oi}" data-ans="${item.ans}" onclick="selectOpt(this)">
+            <span class="letter">${String.fromCharCode(97+oi)}</span> ${o}
+          </div>`;
+        });
+        html += `</div><div class="feedback" id="fb-${key}"></div></div>`;
+      } else {
+        html += `<div class="card q-card">
+          <div class="q-text">${item.q}</div>
+          <button class="reveal-btn" onclick="toggleAns(this)">Show Answer</button>
+          <div class="answer-box">${item.a || '—'}</div>
+        </div>`;
+      }
+    });
+  });
+  setContent.innerHTML = html;
+}
+
+function selectOpt(el) {
+  const card = el.closest('.q-card');
+  if (card.dataset.done) return;
+  card.dataset.done = '1';
+  const ans = +el.dataset.ans;
+  const oi = +el.dataset.oi;
+  const opts = card.querySelectorAll('.opt');
+  opts.forEach(o => {
+    o.classList.remove('selected');
+    if (+o.dataset.oi === ans) o.classList.add('correct');
+  });
+  el.classList.add(oi === ans ? 'correct' : 'wrong');
+  if (oi !== ans) el.classList.add('selected');
+  answered++;
+  if (oi === ans) correct++;
+  const fb = card.querySelector('.feedback');
+  fb.textContent = oi === ans ? '✓ Correct' : '✗ Wrong – correct option highlighted';
+  fb.className = 'feedback ' + (oi === ans ? 'ok' : 'bad');
+  updateScore();
+}
+
+function toggleAns(btn) {
+  const box = btn.nextElementSibling;
+  box.classList.toggle('show');
+  btn.textContent = box.classList.contains('show') ? 'Hide Answer' : 'Show Answer';
+}
+
+// Build set grid
+SETS.forEach(s => {
+  const btn = document.createElement('button');
+  btn.className = 'set-btn';
+  btn.innerHTML = `Set ${s.id}<small>${s.title.replace('MODEL ','')}</small>`;
+  btn.onclick = () => showSet(s.id);
+  setGrid.appendChild(btn);
+});
+
+$('btnHome').onclick = showHome;
+$('btnBackSets').onclick = showHome;
+$('btnTheme').onclick = () => {
+  document.documentElement.style.filter =
+    document.documentElement.style.filter ? '' : 'invert(1) hue-rotate(180deg)';
+};
+
+// Minimal PWA: register empty SW so it can be installed
+if ('serviceWorker' in navigator) {
+  const swCode = `self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('fetch',e=>{});`;
+  const blob = new Blob([swCode], {type: 'application/javascript'});
+  navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
+}
+</script>
 </body>
 </html>
